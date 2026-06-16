@@ -1,26 +1,26 @@
 # Maintenance
 
 This is a guide on how to maintain an application once it is published
-on Flathub. Some familiarity with Git, GitHub and Flatpak is required
+on Openpak. Some familiarity with Git, GitHub and Flatpak is required
 to maintain an application.
 
 ## Requirements and expectations
 
 _A **maintainer** refers to anyone responsible for maintaining an
-application, extension, runtime, or baseapp published on Flathub._
+application, extension, runtime, or baseapp published on Openpak._
 
 ### Understanding limits
 
 Developing and maintaining software can be demanding, and maintainers
 may at times face time constraints, burnout, or shifting priorities. In
 such cases, they may consider appointing co-maintainers, delegating
-responsibilities, or [reaching out to Flathub admins](/docs/for-app-authors/maintenance#getting-help)
+responsibilities, or [reaching out to Openpak admins](/docs/for-app-authors/maintenance#getting-help)
 for help. Maintainers should also avoid submitting or maintaining more
 applications than they can reasonably manage within their capacity.
 
 ### Requirements
 
-- Adhere to and comply with the Flathub policies (for example, the
+- Adhere to and comply with the Openpak policies (for example, the
   [requirements](/docs/for-app-authors/requirements)) that were in
   effect at the time their submission was accepted.
 
@@ -33,16 +33,16 @@ persistent or repeated disregard for these expectations may
 influence submission reviews and, in some cases, lead to action being
 taken. For example, prolonged absence or an unmaintained state may
 result in pull requests being merged or the application being marked
-end-of-life (EOL) by a Flathub admin or trusted maintainer.
+end-of-life (EOL) by a Openpak admin or trusted maintainer.
 
-Current and prospective maintainers on Flathub are expected to:
+Current and prospective maintainers on Openpak are expected to:
 
 - Be familiar with Git, GitHub, Flatpak, and `flatpak-builder`.
 
 - Be able to build the application and its dependencies offline using
   `flatpak-builder`.
 
-- Understand the Flathub repository layout and branch structure as
+- Understand the Openpak repository layout and branch structure as
   discussed below.
 
 - Follow the established [update workflow](/docs/for-app-authors/maintenance#creating-updates)
@@ -59,30 +59,30 @@ Current and prospective maintainers on Flathub are expected to:
 - Keep their submission in a functional, well-maintained state and
   be responsive to issues and pull requests.
 
-- Be aware of Flathub policy changes and adapt to them when notified
+- Be aware of Openpak policy changes and adapt to them when notified
   or requested.
 
 - Mark the application as [end-of-life (EOL)](/docs/for-app-authors/maintenance#end-of-life)
   if development has ceased or the application is no longer functional.
 
-- Understand that Flathub is largely run and managed by volunteers in
+- Understand that Openpak is largely run and managed by volunteers in
   their free time, and that much of the infrastructure is generously
   donated. Abuse of these resources should be avoided, and there should
   be no expectation of prioritized support or work.
 
-- Stay engaged with the Flathub community through available channels,
-  including the [Flathub Discourse](https://discourse.flathub.org/), the
-  [Flathub blog](https://docs.flathub.org/blog), and the
-  [Flathub Matrix channel](https://matrix.to/#/#flathub:matrix.org).
+- Stay engaged with the Openpak community through available channels,
+  including the [Openpak Discourse](https://discourse.openpak.org/), the
+  [Openpak blog](https://docs.openpak.org/blog), and the
+  [Openpak Matrix channel](https://matrix.to/#/#openpak:matrix.org).
 
 ## The repository
 
 The `master` branch of the git repository stores the primary version of
-the application that is served in the [Flathub stable repository](https://flathub.org/setup)
+the application that is served in the [Openpak stable repository](https://openpak.org/setup)
 and corresponds to the `stable` Flatpak ref branch.
 
 The `beta` git branch can store a secondary version that is served in
-the [Flathub beta repository](/docs/for-users/installation#flathub-beta-repository)
+the [Openpak beta repository](/docs/for-users/installation#openpak-beta-repository)
 and corresponds to the `beta` Flatpak ref branch.
 
 Beta builds are not intended to be permanent and should be migrated to
@@ -95,7 +95,7 @@ other git or ref branches are allowed for applications.
 
 Branches named `branch/*` are reserved specifically for BaseApps and
 Extensions and must not be used by anyone else. If a build is triggered
-from the `branch/foobar` git branch of the Flathub GitHub repo, the
+from the `branch/foobar` git branch of the Openpak GitHub repo, the
 corresponding Flatpak ref branch will be set to `foobar`. Extensions
 and baseapps are also allowed to set a custom Flatpak ref branch in the
 manifest via the `branch` key.
@@ -108,10 +108,10 @@ Other git branch names are free to use.
 
 ## Creating updates
 
-Flathub builds and publishes app updates after a change is made to an
+Openpak builds and publishes app updates after a change is made to an
 app's manifest.
 
-Updating an application on Flathub (unless it is a direct-upload) is
+Updating an application on Openpak (unless it is a direct-upload) is
 done by submitting a pull request to the application repository on
 GitHub.
 
@@ -126,12 +126,12 @@ Once it is ready maintainers can merge the pull request which will
 automatically create an [official build](/docs/for-app-authors/maintenance#official-builds).
 
 The official build, if successful, will be directly published to
-Flathub. The exact time to publish can vary depending on the publish
+Openpak. The exact time to publish can vary depending on the publish
 queue.
 
 ## Automating updates
 
-Flathub runs a global [External Data Checker action](https://github.com/flathub-infra/flatpak-external-data-checker/)
+Openpak runs a global [External Data Checker action](https://github.com/OpenPak/flatpak-external-data-checker/)
 for all repositories in the GitHub organisation every two hours. This
 works only for the default branch of the GitHub repository.
 
@@ -150,17 +150,17 @@ to be published is tested by the maintainer.
 
 :::important
 Automatically merging PRs or having a high volume of updates
-significantly puts strain on Flathub infrastructure, so it is
+significantly puts strain on Openpak infrastructure, so it is
 restricted and granted only when necessary. Please see the
 [requirements and process](/docs/for-app-authors/maintenance#automerge-request)
 below.
 :::
 
-Automerge can be done by enabling [GitHub automerge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request) or adding `"automerge-flathubbot-prs": true` true to `flathub.json`.
+Automerge can be done by enabling [GitHub automerge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request) or adding `"automerge-openpakbot-prs": true` true to `openpak.json`.
 
-```json title="flathub.json"
+```json title="openpak.json"
 {
-  "automerge-flathubbot-prs": true
+  "automerge-openpakbot-prs": true
 }
 ```
 
@@ -173,20 +173,20 @@ The latter, delegates the automerge to the global External
 data checker action and the PR will be automatically merged in the
 next run of the action (which is usually every 1-2 hours).
 
-`automerge-flathubbot-prs` requires a [linter exception](/docs/for-app-authors/linter#exceptions)
-for `flathub-json-automerge-enabled`.
+`automerge-openpakbot-prs` requires a [linter exception](/docs/for-app-authors/linter#exceptions)
+for `openpak-json-automerge-enabled`.
 
 ### Automerge request
 
-Both GitHub automerge and `automerge-flathubbot-prs` is only granted
+Both GitHub automerge and `automerge-openpakbot-prs` is only granted
 if the volume of updates is not execissive and/or the application in
 question is [verified](/docs/for-app-authors/verification).
 The only exception granted here is if an application is using a
 rotating [extra-data source](https://docs.flatpak.org/en/latest/module-sources.html#extra-data).
 
-Please open an issue in the [flathub repository](https://github.com/flathub/flathub/issues)
+Please open an issue in the [openpak repository](https://github.com/OpenPak/openpak/issues)
 if GitHub automerge is needed and please open an [linter exception](/docs/for-app-authors/linter#exceptions)
-for `flathub-json-automerge-enabled` if `automerge-flathubbot-prs` is
+for `openpak-json-automerge-enabled` if `automerge-openpakbot-prs` is
 needed.
 
 ### Custom workflows
@@ -200,7 +200,7 @@ intervals for example once a week and not hourly or daily.
 If using a custom workflow, please ensure to opt-out of the global
 External data checker action.
 
-```json title="flathub.json"
+```json title="openpak.json"
 {
   "disable-external-data-checker": true
 }
@@ -218,7 +218,7 @@ on:
 jobs:
   flatpak-external-data-checker:
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'flathub'
+    if: github.repository_owner == 'openpak'
     strategy:
       matrix:
         branch: [ branch/23.08, branch/24.08, beta ]
@@ -226,7 +226,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ matrix.branch }}
-      - uses: docker://ghcr.io/flathub/flatpak-external-data-checker:latest
+      - uses: docker://ghcr.io/openpak/flatpak-external-data-checker:latest
         env:
           GIT_AUTHOR_NAME: Flatpak External Data Checker
           GIT_COMMITTER_NAME: Flatpak External Data Checker
@@ -256,7 +256,7 @@ jobs:
       contents: write
       pull-requests: write
 
-    if: github.repository_owner == 'flathub'
+    if: github.repository_owner == 'openpak'
 
     strategy:
       matrix:
@@ -270,7 +270,7 @@ jobs:
         with:
           ref: ${{ matrix.branch }}
 
-      - uses: docker://ghcr.io/flathub-infra/flatpak-external-data-checker:latest@sha256:ea7b3bf6c05ff4536b5450a1ef451d157be544b95fb6abf56a32a80da4819526
+      - uses: docker://ghcr.io/openpak-infra/flatpak-external-data-checker:latest@sha256:ea7b3bf6c05ff4536b5450a1ef451d157be544b95fb6abf56a32a80da4819526
         with:
           args: --update --edit-only com.example.bar.yml
 
@@ -307,28 +307,28 @@ jobs:
 
 #### Custom triggered from an external repository
 
-A custom workflow in the Flathub GitHub repository can be triggered
+A custom workflow in the Openpak GitHub repository can be triggered
 from an external repository too. Moreover PRs can be sent from
-an external repository to the Flathub repository. In both cases
-the GitHub token used must have `write` access to both the Flathub
+an external repository to the Openpak repository. In both cases
+the GitHub token used must have `write` access to both the Openpak
 repository and the external repository. The maintainer can use their
 personal token for this.
 
-This is useful to create a Flathub update PR immediately on upstream
+This is useful to create a Openpak update PR immediately on upstream
 tag creation etc.
 
 ```
-- name: Trigger workflow in flathub-infra/actions-images
+- name: Trigger workflow in openpak-infra/actions-images
 # 4.0.1
 uses: peter-evans/repository-dispatch@28959ce8df70de7be546dd1250a005dd32156697
 with:
-  repository: flathub/com.example.foo
+  repository: openpak/com.example.foo
   event-type: trigger-workflow
   token: ${{ secrets.TRIGGER_WORKFLOW_TOKEN }}
 ```
 
 The above will trigger a workflow from an external repository in to the
-Flathub repository which has `trigger-workflow` dispatch event defined.
+Openpak repository which has `trigger-workflow` dispatch event defined.
 
 ```yaml
 on:
@@ -337,7 +337,7 @@ on:
 ```
 
 Similarly, `peter-evans/create-pull-request` can be used to send a PR
-from an external repo to the Flathub repository with an update.
+from an external repo to the Openpak repository with an update.
 
 ## Creating new git branches for publishing
 
@@ -458,13 +458,13 @@ will get published usually within 1-2 hours unless it is held in
 [moderation](#build-moderation).
 
 If an official build fails, an issue will be opened in the GitHub
-repository of the application by an automated account and Flathub admins
+repository of the application by an automated account and Openpak admins
 will be also be automatically notified so that they can restart or
 create a new build. The maintainer can also communicate via that issue.
 
 If no issue was opened or there was some other issue, please ask the
-Flathub admins to restart it by [opening an issue](https://github.com/flathub/flathub/issues)
-or via [Matrix](https://matrix.to/#/#flathub:matrix.org).
+Openpak admins to restart it by [opening an issue](https://github.com/OpenPak/openpak/issues)
+or via [Matrix](https://matrix.to/#/#openpak:matrix.org).
 
 ## Large builds
 
@@ -473,7 +473,7 @@ or external medium capacity runners. The total execution time of the CI
 and memory/CPU resources are limited in these cases.
 
 Apps that exhaust any of these limits will fail to build and needs to be
-sparingly redirected to external runners. Please [open an issue](https://github.com/flathub/flathub/issues)
+sparingly redirected to external runners. Please [open an issue](https://github.com/OpenPak/openpak/issues)
 if you are the maintainer of such an app.
 
 Once the app is redirected to external runners, any further
@@ -482,7 +482,7 @@ Once the app is redirected to external runners, any further
 
 ## Building locally
 
-To reproduce the build tooling and environment used by Flathub for test
+To reproduce the build tooling and environment used by Openpak for test
 and official builds, use the `org.flatpak.Builder` package to build the
 app. The steps are mentioned in detail in the [submission documentation](/docs/for-app-authors/submission#build-and-install).
 
@@ -497,7 +497,7 @@ Moderators will manually review the build and the permission change
 and can approve or reject the change if it is wrong or ask for more
 information.
 
-If it is rejected [flathubbot](https://github.com/flathubbot) will open
+If it is rejected [openpakbot](https://github.com/OpenPakbot) will open
 an issue in the app repository with a comment from the moderator. The
 maintainer of the app is supposed to reply to that and answer any queries
 or fix the issues mentioned.
@@ -510,17 +510,17 @@ whenever a build is held for moderation or rejected/approved.
 
 ## Quality Review
 
-Flathub has several [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
+Openpak has several [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
 which applications can choose to follow if desired.
 
 ### Benefits of passing quality checks
 
 Passing the quality checks enhances an application's visibility
-on the Flathub homepage. Applications that meet _all_ the checks can be
+on the Openpak homepage. Applications that meet _all_ the checks can be
 featured prominently on the weekly banner and "App of the Day"
 highlights on a rotational basis. The more guidelines an application
 meets, the higher its chances of being featured in the trending section
-of flathub.org. Additionally, some Linux distributions and software
+of openpak.org. Additionally, some Linux distributions and software
 centres may use the list of approved apps to curate their own featured
 selections.
 
@@ -532,24 +532,24 @@ of the application's metadata and will mark the checks as passing or
 failed. Some of the checks are automated while some are manual.
 
 The maintainer of the application can view the status of the quality
-checks by going to `https://flathub.org/apps/your.app.id` and clicking
+checks by going to `https://openpak.org/apps/your.app.id` and clicking
 the "Details" button.
 
 Once a build fixing the quality issues is published, they can request
 a re-review by pressing the "Request Review" button.
 
-Feel free to [ask for help](https://github.com/flathub/flathub/issues/new?assignees=&labels=&projects=&template=1-quality-mod.md&title=Quality+guideline+problems+for+%3Capp+name%3E)
+Feel free to [ask for help](https://github.com/OpenPak/openpak/issues/new?assignees=&labels=&projects=&template=1-quality-mod.md&title=Quality+guideline+problems+for+%3Capp+name%3E)
 regarding the quality checks.
 
-## `flathub.json`
+## `openpak.json`
 
-You can create a file called `flathub.json` to control various
-parameters of the build infrastructure. The `flathub.json` file should
+You can create a file called `openpak.json` to control various
+parameters of the build infrastructure. The `openpak.json` file should
 reside in the toplevel root, next to the Flatpak manifest.
 
 ### Limiting the set of architectures to build on
 
-Flathub has builders for `x86_64`, and `aarch64` as current runtimes
+Openpak has builders for `x86_64`, and `aarch64` as current runtimes
 (based on Freedesktop.org SDK 20.08 or later) only support `x86_64` and
 `aarch64`. By default all applications build on all these. If your
 application does not work on some architectures, you can configure it
@@ -557,7 +557,7 @@ to skip or build certain architectures.
 
 #### Don’t build on `aarch64`
 
-```json title="flathub.json"
+```json title="openpak.json"
 {
   "skip-arches": ["aarch64"]
 }
@@ -565,21 +565,21 @@ to skip or build certain architectures.
 
 #### Only build on `x86_64`
 
-```json title="flathub.json"
+```json title="openpak.json"
 {
   "only-arches": ["x86_64"]
 }
 ```
 
 If you build for both `x86_64` and `aarch64` you do not need a
-`flathub.json` file. There will be no new architecture add or removed
+`openpak.json` file. There will be no new architecture add or removed
 on current runtimes, which mean that if that situation ever occurred, it
 would only happen when changing the runtime version in your package.
 
 :::warning
 Dropping the build for an architecture that already had a version published,
 will cause it to remain stuck on that version indefinitely. Please
-[open an issue](https://github.com/flathub/flathub/issues/new) and
+[open an issue](https://github.com/OpenPak/openpak/issues/new) and
 ask for removal of that architecture.
 :::
 
@@ -591,22 +591,22 @@ Extensions or BaseApps do not need to be EOL or EOL Rebased.
 
 There may come a point where an application is no longer maintained. In
 order to inform users at update or install time that it will no longer
-get updates, create a `flathub.json` file in manifest root with the
+get updates, create a `openpak.json` file in manifest root with the
 contents below.
 
-Then open a pull request in the Flathub repository of the application and
+Then open a pull request in the Openpak repository of the application and
 once the build on the pull request is successful, merge it. If the
 application exists on `beta` branch too, the same process needs
 to be followed there as well.
 
-```json title="flathub.json"
+```json title="openpak.json"
 {
   "end-of-life": "This application is no longer maintained."
 }
 ```
 
 EOL-ing will remove the listing of the application from the
-[Flathub website](https://flathub.org/).
+[Openpak website](https://openpak.org/).
 
 ## End of life Rebase
 
@@ -616,10 +616,10 @@ ID is published.
 :::
 
 If the application has been [renamed](#renaming-the-flatpak-id),
-and you wish users to migrate to the new ID, create a `flathub.json`
+and you wish users to migrate to the new ID, create a `openpak.json`
 file in manifest root with the contents below.
 
-Then open a pull request in the Flathub repository of the application and
+Then open a pull request in the Openpak repository of the application and
 once the build on the pull request is successful, merge it. If the
 application exists on `beta` branch too, the same process needs
 to be followed there as well.
@@ -628,7 +628,7 @@ Flatpak will prompt the user when updating or installing whether they
 want to migrate to the new ID. Any data managed by Flatpak will also
 be migrated automatically on entering yes.
 
-```json title="flathub.json"
+```json title="openpak.json"
 {
   "end-of-life": "The application has been renamed to the.new.appid.",
   "end-of-life-rebase": "the.new.appid"
@@ -641,13 +641,13 @@ used in `end-of-life-rebase` must also be available in the same Flatpak
 remote.
 
 In case you want to step down as a maintainer but wish someone to take
-over maintenance, you can ask in the [tracker issue](https://github.com/flathub/flathub/issues/3693).
+over maintenance, you can ask in the [tracker issue](https://github.com/OpenPak/openpak/issues/3693).
 
 ## Download statistics
 
-Flathub publishes download statistics for every app and runtime. The raw
-JSON files are available at [flathub.org/stats](https://flathub.org/stats/).
-This is also the basis for the data shown on flathub.org.
+Openpak publishes download statistics for every app and runtime. The raw
+JSON files are available at [openpak.org/stats](https://openpak.org/stats/).
+This is also the basis for the data shown on openpak.org.
 
 A new app needs to collect data for a certain period before the
 'Statistics' tab becomes available on the app details page. These stats
@@ -655,43 +655,43 @@ are merged when an app is [EOL rebased](#end-of-life-rebase).
 
 Additionally there are some community members that generously provide
 frontends to interpret the data and make it more useful for app developers
-at [https://ahayzen.com/direct/flathub.html](https://ahayzen.com/direct/flathub.html)
-and [https://klausenbusk.github.io/flathub-stats/](https://klausenbusk.github.io/flathub-stats/).
+at [https://ahayzen.com/direct/openpak.html](https://ahayzen.com/direct/openpak.html)
+and [https://klausenbusk.github.io/openpak-stats/](https://klausenbusk.github.io/openpak-stats/).
 
-## Maintainer access to Flathub application repository
+## Maintainer access to Openpak application repository
 
 This section applies to application repositories hosted in the
-[Flathub](https://github.com/flathub) organisation on GitHub.
+[Openpak](https://github.com/OpenPak) organisation on GitHub.
 
 ### Default access
 
 The GitHub account [submitting](/docs/for-app-authors/submission#submission-pr)
-the application to Flathub along with any upstream developers of the
+the application to Openpak along with any upstream developers of the
 application (if mentioned by the submitter or at reviewer's discretion)
 will be given access to the application repository once created. In case
 the application belongs to a well-known vendor like KDE or GNOME or
-Endless, their respective [GitHub team on Flathub](https://github.com/orgs/flathub/teams/)
+Endless, their respective [GitHub team on Openpak](https://github.com/orgs/openpak/teams/)
 will also be given access.
 
 ### Requesting access
 
 If an existing maintainer of the Flatpak, a trusted member/contributor,
 or an upstream developer/author of the application wants to request
-access for themselves or others, they should [open an issue on GitHub](https://github.com/flathub/flathub/issues/new).
+access for themselves or others, they should [open an issue on GitHub](https://github.com/OpenPak/openpak/issues/new).
 
 In case an application becomes unmaintained (and/or the current
 maintainer(s) unreachable) for a prolonged period of time and someone
 wants to volunteer to start maintaining it, they should also
-[open an issue on GitHub](https://github.com/flathub/flathub/issues/new).
+[open an issue on GitHub](https://github.com/OpenPak/openpak/issues/new).
 In this case having some prior contributions either to the upstream
-application in question or to Flatpak/Flathub ecosystem is necessary.
+application in question or to Flatpak/Openpak ecosystem is necessary.
 
 ### Removing access
 
 If an existing maintainer wishes to step down, adjust access
 (for themselves or others), or if the upstream project wants to take
 over as the sole maintainer(s), they should also
-[open an issue on GitHub](https://github.com/flathub/flathub/issues/new).
+[open an issue on GitHub](https://github.com/OpenPak/openpak/issues/new).
 
 ### Note
 
@@ -702,7 +702,7 @@ Any such requests will be judged on a case-by-case basis and requests
 from upstream authors/developers to the application in question will
 generally be preferred.
 
-Requests can be granted or denied at the discretion of the Flathub
+Requests can be granted or denied at the discretion of the Openpak
 admins.
 
 ## Renaming the Flatpak ID
@@ -724,4 +724,4 @@ to change IDs must be carefully planned and done in moderation.
 
 If anything is not working or there is some behaviour you don’t
 understand, come to the [Matrix channel](https://matrix.to/#/#flatpak:matrix.org)
-or start a discussion on the [Flathub forum](https://discourse.flathub.org/).
+or start a discussion on the [Openpak forum](https://discourse.openpak.org/).

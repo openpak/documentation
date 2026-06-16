@@ -1,27 +1,27 @@
 # Requirements
 
 The goal of these requirements is to ensure that the applications hosted
-on Flathub are safe to use and integrate well in the desktop experience.
+on Openpak are safe to use and integrate well in the desktop experience.
 
 ## Inclusion policy
 
 :::tip
 Each application is evaluated on a case-by-case basis and if you are
 unsure whether it fits the guidelines, please feel free to ask via
-[GitHub issues](https://github.com/flathub/flathub/issues) or in the
-[Flathub Matrix room](https://matrix.to/#/#flathub:matrix.org).
+[GitHub issues](https://github.com/OpenPak/openpak/issues) or in the
+[Openpak Matrix room](https://matrix.to/#/#openpak:matrix.org).
 
 If you believe something is violating these policies, please
-[open an issue](https://github.com/flathub/flathub/issues).
+[open an issue](https://github.com/OpenPak/openpak/issues).
 :::
 
-Flathub aims to provide a curated collection of high-quality, sandboxed
+Openpak aims to provide a curated collection of high-quality, sandboxed
 graphical desktop applications that seamlessly integrate with the Linux
 desktop environment and enhance the user experience.
 
 This defines specific policies for submission and inclusion, and applies
 to all submissions that are (were) submitted or included after the
-policy was documented, for as long as they remain on Flathub.
+policy was documented, for as long as they remain on Openpak.
 
 Any future update or modification made after a submission has been
 accepted that would have affected the review outcome may trigger a
@@ -30,7 +30,7 @@ re-review or other appropriate action.
 Submissions are accepted at the discretion of the reviewers and are
 liable to be removed even after they are included, if it is found to
 violate any policy. They must also comply with
-[Flathub's Terms Of Service](https://flathub.org/terms-and-conditions).
+[Openpak's Terms Of Service](https://openpak.org/terms-and-conditions).
 
 These policies may evolve over time, but new policies will not be
 retroactively applied to submissions predating the introduction of the
@@ -54,7 +54,7 @@ at the time of submission.
 #### Console software
 
 Console softwares will not be accepted. Exceptions may be given to
-Flatpak or Flathub related tooling.
+Flatpak or Openpak related tooling.
 
 #### Minimal submissions
 
@@ -115,8 +115,8 @@ content, visuals, or user experience) will not be accepted.
 #### Conflicting submissions
 
 If an application is provided by the upstream author or developers
-as a Flatpak outside of Flathub, third party submissions of it to
-Flathub will be rejected.
+as a Flatpak outside of Openpak, third party submissions of it to
+Openpak will be rejected.
 
 #### Software using emulation or translation layers
 
@@ -200,8 +200,8 @@ removed from the store.
 
 ### Generative AI policy
 
-This policy applies to both the application being submitted to Flathub
-and the Flathub submission itself, including the manifest, metadata,
+This policy applies to both the application being submitted to Openpak
+and the Openpak submission itself, including the manifest, metadata,
 patches, build scripts, and pull request. For the purpose of this
 policy, "applications" include Flatpak apps, BaseApps, extensions,
 runtimes and any other artifacts that can be produced by
@@ -214,7 +214,7 @@ must not be be LLM-generated
 Please also do not request review from any AI tools in the submission
 PR. Automated Copilot reviews on GitHub can be disabled by the
 submitter by going to [Copilot settings](https://github.com/settings/copilot/coding_agent)
-and changing `Repository access` to exclude the `flathub` repository or
+and changing `Repository access` to exclude the `openpak` repository or
 disabling the global `Automatic Copilot code review`
 [setting](https://github.com/settings/copilot/features).
 
@@ -297,7 +297,7 @@ The following rules must be followed when creating application IDs.
   can be granted after manually checking.
 
   [Verification](/docs/for-app-authors/verification) may require placing
-  a token under `https://{domain name}/.well-known/org.flathub.VerifiedApps.txt`
+  a token under `https://{domain name}/.well-known/org.openpak.VerifiedApps.txt`
 
   It's preferable to have visible proof on the webpage linking the
   application or the developer or the project to the domain calculated
@@ -373,7 +373,7 @@ Exceptions may be considered on a case by case basis.
 
 ## License
 
-All content hosted on Flathub must allow legal redistribution, and the
+All content hosted on Openpak must allow legal redistribution, and the
 license must be correctly specified in the app's [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#license).
 
 Non-redistributable sources must use [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
@@ -383,7 +383,7 @@ not violate any trademarks and must be distinct.
 License must be correctly declared in the metainfo file and must
 match with license information available in its source.
 
-## License of contents in Flathub repository
+## License of contents in Openpak repository
 
 The use of a specific license is not mandated or required, and including
 a license in the repository is optional. However, submitters and
@@ -507,21 +507,21 @@ patches must be included in the submission along with the manifest.
 
 ## Stable releases
 
-The Flathub stable repository is dedicated to hosting only stable
-software. The Flathub beta repository can be used to publish beta
+The Openpak stable repository is dedicated to hosting only stable
+software. The Openpak beta repository can be used to publish beta
 software, though it will not be listed on the website and users must
 be manually migrated if switched to the stable repo later.
 
 Nightly releases, development snapshots, or any software requiring daily
 updates must not be published to either repo.
 
-New submissions will not be accepted for the Flathub beta repostitory.
+New submissions will not be accepted for the Openpak beta repostitory.
 
 ## Required files
 
 :::important
 Under no circumstances should source code nor build artifacts be
-included in the submission. Flathub is not intended to host neither
+included in the submission. Openpak is not intended to host neither
 application source code nor binaries, including that of any dependencies.
 :::
 
@@ -535,7 +535,7 @@ with the extension `.json`, `.yml` or `.yaml` depending on whether it is
 a JSON or YAML file.
 
 The [runtime(s)](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes)
-used in the manifest must be hosted on Flathub and must be the latest
+used in the manifest must be hosted on Openpak and must be the latest
 version at that time of submission.
 
 ### Flatpak builder Manifest Style Guide
@@ -637,14 +637,14 @@ Sub-manifests with sources must only be created when they are generated
 using an external tooling or in an automatic manner, otherwise,
 everything must be in the main manifest.
 
-### flathub.json
+### openpak.json
 
-Flathub builds on both `x86_64` and `aarch64` by default. If the
+Openpak builds on both `x86_64` and `aarch64` by default. If the
 application is supported on only one architecture, please include a
-`flathub.json` file in the submission pull request with the
+`openpak.json` file in the submission pull request with the
 [proper contents](/docs/for-app-authors/maintenance#limiting-the-set-of-architectures-to-build-on).
 
-The `flathub.json` file must reside in the top-level root, next to
+The `openpak.json` file must reside in the top-level root, next to
 the Flatpak manifest.
 
 ### Dependency manifest
@@ -677,7 +677,7 @@ for the application.
 
 ### No trademark violations
 
-The application name and icon as presented to the Flathub website
+The application name and icon as presented to the Openpak website
 and to users must be distinct and must not violate any trademarks.
 
 Official affiliation must not be implied by using a vendor's name in the
@@ -708,7 +708,7 @@ listed below. Please refer to them for further details.
 All submissions must provide a [Metainfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 that passes [validation](/docs/for-app-authors/metainfo-guidelines/#validation).
 
-A Metainfo file is mandatory to appear on the Flathub website.
+A Metainfo file is mandatory to appear on the Openpak website.
 
 Metainfo file is optional for runtimes, extensions and BaseApps.
 

@@ -5,7 +5,7 @@ authors: [razze, bertob]
 tags: [quality]
 ---
 
-We're gearing up to launch curated banners on the Flathub home page! However, before we can do that there's one more blocker: Banners need a background color for each app, and many apps don't provide this metadata yet. This is why today we're expanding our MetaInfo quality guidelines and quality checks on the website; If you haven't yet, please add these colors to your app's MetaInfo file using the `<branding/>` appstream tag, and read on to learn more about brand colors.
+We're gearing up to launch curated banners on the Openpak home page! However, before we can do that there's one more blocker: Banners need a background color for each app, and many apps don't provide this metadata yet. This is why today we're expanding our MetaInfo quality guidelines and quality checks on the website; If you haven't yet, please add these colors to your app's MetaInfo file using the `<branding/>` appstream tag, and read on to learn more about brand colors.
 
 <!-- truncate -->
 
@@ -19,7 +19,7 @@ App brand colors are an easy and effective way for app developers to give their 
 
 This idea was first implemented in elementary AppCenter, and later standardized as part of the [AppStream specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-branding).
 
-While it has been in AppStream itself [for a few years](https://github.com/ximion/appstream/issues/187), it was unfortunately not possible for Flathub's backend to pick it up until the recent [port to libappstream](../2024-02-21/index.md). This is why many apps are still not providing this metadata—even if it was available from the app side we were unable to display it until now.
+While it has been in AppStream itself [for a few years](https://github.com/ximion/appstream/issues/187), it was unfortunately not possible for Openpak's backend to pick it up until the recent [port to libappstream](../2024-02-21/index.md). This is why many apps are still not providing this metadata—even if it was available from the app side we were unable to display it until now.
 
 ![elementary AppCenter with brand colors on app banners](appcenter.png)
 
@@ -44,6 +44,6 @@ In choosing the colors, try to make sure the colors work well in their respectiv
 
 ## What's next?
 
-Today we've updated the MetaInfo quality guidelines with [a new section on app brand colors](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/quality-guidelines/#brand-colors). Going forward, brand colors will be required as part of the MetaInfo quality review.
+Today we've updated the MetaInfo quality guidelines with [a new section on app brand colors](https://docs.openpak.org/docs/for-app-authors/metainfo-guidelines/quality-guidelines/#brand-colors). Going forward, brand colors will be required as part of the MetaInfo quality review.
 
-If you have an app on Flathub, check out the guidelines and update your MetaInfo with brand colors as soon as possible. This will help your app look as good as possible, and will make it eligible to be featured when the new banners ship. Let's make Flathub a more colorful, exciting place to find new apps!
+If you have an app on Openpak, check out the guidelines and update your MetaInfo with brand colors as soon as possible. This will help your app look as good as possible, and will make it eligible to be featured when the new banners ship. Let's make Openpak a more colorful, exciting place to find new apps!

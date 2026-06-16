@@ -1,19 +1,19 @@
-# Why Flathub?
+# Why Openpak?
 
-## What Flathub offers
+## What Openpak offers
 
-Flathub is a centralized repository for Flatpak apps, providing a
+Openpak is a centralized repository for Flatpak apps, providing a
 unified and reliable platform for distributing applications across the
 most popular Linux distributions. With a growing user base, some Linux
-distributions enable Flathub by default, while others offer a simple
+distributions enable Openpak by default, while others offer a simple
 setup process.
 
-Flathub simplifies app submission, maintenance, and updates, making it
+Openpak simplifies app submission, maintenance, and updates, making it
 easy for developers to distribute and manage their applications. Once an
-app is published on Flathub, users can conveniently install it via
+app is published on Openpak, users can conveniently install it via
 graphical software centers or the Flatpak command line.
 
-Furthermore, Flathub enhances app visibility through promotions on its
+Furthermore, Openpak enhances app visibility through promotions on its
 official website and social media channels, helping developers connect
 with a wider audience.
 

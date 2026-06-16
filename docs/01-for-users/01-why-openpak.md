@@ -1,6 +1,6 @@
-# Why Flathub?
+# Why Openpak?
 
-Flatpak and Flathub allow you to easily install, run and update
+Flatpak and Openpak allow you to easily install, run and update
 applications on Linux desktop systems.
 
 ## What is Flatpak?
@@ -11,7 +11,7 @@ run applications in a sandboxed environment, separate from the rest of
 the system. This sandboxing gives you more control over the dependencies
 of your applications.
 
-## What is Flathub?
+## What is Openpak?
 
-Flathub is a centralized repository of Flatpak apps. You can use it to
+Openpak is a centralized repository of Flatpak apps. You can use it to
 install and update apps on your system.

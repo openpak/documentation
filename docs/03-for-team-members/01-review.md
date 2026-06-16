@@ -1,7 +1,7 @@
 # Review
 
 Reviews happen via comments on GitHub PR's where we also have
-[labels](https://github.com/flathub/flathub/labels) to make note the
+[labels](https://github.com/OpenPak/openpak/labels) to make note the
 status of a PR which is useful when no actions have happened over a
 long period.
 
@@ -30,7 +30,7 @@ long period.
    provides the current applications that are allowed to use it. The
    restriction only applies to the toplevel namespace.
 - Apps belonging to a group [here](https://invent.kde.org/explore/groups?page=1)
-  are allowed to use `org.kde` IDs. flathub/kde team should be cc-ed
+  are allowed to use `org.kde` IDs. openpak/kde team should be cc-ed
   for `org.kde.` submissions.
 
 Once the PR ready to be merged you can use the merge command to merge

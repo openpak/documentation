@@ -1,19 +1,19 @@
 # Quality guidelines
 
 :::tip
-Please [open an issue](https://github.com/flathub/flathub/issues/new?assignees=&labels=&projects=&template=1-quality-mod.md&title=Quality+guideline+problems+for+%3Capp+name%3E) using the Quality Guidelines template for support
+Please [open an issue](https://github.com/OpenPak/openpak/issues/new?assignees=&labels=&projects=&template=1-quality-mod.md&title=Quality+guideline+problems+for+%3Capp+name%3E) using the Quality Guidelines template for support
 regarding these guidelines.
 :::
 
-The following guidelines are not required for submission to Flathub,
+The following guidelines are not required for submission to Openpak,
 but are best practices we recommend and consider for curation and
-promotion. These guidelines are designed to help your app and Flathub
+promotion. These guidelines are designed to help your app and Openpak
 itself appear in the best light to users. The guidelines may change over
 time based on developer and user feedback.
 
 The term `must` in these guidelines is used in the context of considering
 whether an app passes the app listing quality checks. Apps that do not
-follow these guidelines may still be published on Flathub.
+follow these guidelines may still be published on Openpak.
 
 For the basics on how to write metadata for your app, see the
 [MetaInfo Guidelines](/docs/for-app-authors/metainfo-guidelines).
@@ -21,11 +21,11 @@ For the basics on how to write metadata for your app, see the
 ### Benefits of passing quality checks
 
 Passing the quality checks enhances an application's visibility
-on the Flathub homepage. Applications that meet _all_ the checks can be
+on the Openpak homepage. Applications that meet _all_ the checks can be
 featured prominently on the weekly banner and "App of the Day"
 highlights on a rotational basis. The more guidelines an application
 meets, the higher its chances of being featured in the trending section
-of flathub.org. Additionally, some Linux distributions and software
+of openpak.org. Additionally, some Linux distributions and software
 centres may use the list of approved apps to curate their own featured
 selections.
 
@@ -46,8 +46,8 @@ Check [Runtimes](/docs/for-app-authors/runtimes) for runtime support periods and
 
 ### Managed by app author
 
-Use Flathub verification to indicate that you are the author of the app
-and that you are managing the app on Flathub.
+Use Openpak verification to indicate that you are the author of the app
+and that you are managing the app on Openpak.
 
 ## Brand colors
 
@@ -139,7 +139,7 @@ be recognizable, e.g. a flat single-colored symbol is too simple.
 ### No baked-in shadows
 
 The icon should not have any baked-in shadows or glows. Both the
-Flathub website and native stores apply a shadow to all icons, so
+Openpak website and native stores apply a shadow to all icons, so
 baked-in shadows result in double shadows or other glitches.
 
 ### In line with contemporary styles
@@ -195,7 +195,7 @@ to the name; use the summary to provide this information instead.
 - Firefox
   :::
 
-If the app is distinct among different versions of your app on Flathub
+If the app is distinct among different versions of your app on Openpak
 (e.g. `Firefox Beta` versus the standard `Firefox`), then using the full
 name including the edition may be acceptable.
 
@@ -329,7 +329,7 @@ probably too many.
 
 :::tip
 Your best screenshot should be in the first position because it will be
-the first thing a user sees when viewing your app on Flathub.
+the first thing a user sees when viewing your app on Openpak.
 
 We might also use this in other places, such as featured banners, so
 make sure it's a good one.

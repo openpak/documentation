@@ -54,7 +54,7 @@ an API call for this since 2019 but we could not really use it, as apps had to
 be in a buildable state only to deprecate them.
 
 Vorarbeiter will now detect that a PR modifies only the end-of-life keys in the
-`flathub.json` file, skip test and regular builds, and directly use the
+`openpak.json` file, skip test and regular builds, and directly use the
 flat-manager API to republish the app with the EOL flag set post-merge.
 
 ## Web UI
@@ -71,9 +71,9 @@ not nice, okay? I like to know what's being built and now you can too
 ## Reproducible builds
 
 We have started testing binary reproducibility of x86_64 builds targetting the
-stable repository. This is possible thanks to [flathub-repro-checker][frc], a
+stable repository. This is possible thanks to [openpak-repro-checker][frc], a
 tool doing the necessary legwork to recreate the build environment and compare
-the result of the rebuild with what is published on Flathub.
+the result of the rebuild with what is published on Openpak.
 
 While these tests have been running for a while now, we have recently restarted them
 from scratch after enabling S3 storage for diffoscope artifacts. The current
@@ -86,6 +86,6 @@ direct uploads at the moment.
 [runson]: https://runs-on.com/
 [aws]: https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/
 [oras]: https://oras.land/
-[frc]: https://github.com/flathub-infra/flathub-repro-checker
-[webui]: https://builds.flathub.org/
-[reprowebui]: https://builds.flathub.org/reproducible
+[frc]: https://github.com/OpenPak/openpak-repro-checker
+[webui]: https://builds.openpak.org/
+[reprowebui]: https://builds.openpak.org/reproducible

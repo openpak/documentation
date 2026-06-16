@@ -6,7 +6,7 @@ older version.
 First you look for the version you are interested in:
 
 ```bash
-flatpak remote-info --log flathub com.github.tchx84.Flatseal
+flatpak remote-info --log openpak com.github.tchx84.Flatseal
 ```
 
 Here is what the output looks like at the time of writing:
@@ -20,7 +20,7 @@ Flatseal - Manage Flatpak permissions
     Branch: stable
    Version: 2.1.0
    License: GPL-3.0-or-later
-Collection: org.flathub.Stable
+Collection: org.openpak.Stable
   Download: 167,1 kB
  Installed: 540,7 kB
    Runtime: org.gnome.Platform/x86_64/45

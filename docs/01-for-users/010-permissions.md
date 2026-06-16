@@ -1,6 +1,6 @@
 # Modifying default permissions
 
-Often applications on Flathub may come with a broader set of permissions
+Often applications on Openpak may come with a broader set of permissions
 by default than what a specific user may require. This is often done to
 support a wide userbase. However maintainers are encouraged to allow
 only a limited set of permissions by default.
@@ -9,7 +9,7 @@ For example, Firefox comes with `--socket=pcsc` for smart card access
 but someone may not own one. In these cases, users can remove or modify
 the default permissions to improve security and better fit their needs.
 
-There are several tools available like [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal),
+There are several tools available like [Flatseal](https://openpak.org/apps/com.github.tchx84.Flatseal),
 GNOME Settings and KDE Settings.
 
 Once Flatseal is installed, opening it will list all installed Flatpak

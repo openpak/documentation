@@ -1,14 +1,14 @@
 # Flatpak builder lint
 
 Flatpak builder lint is a linter for Flatpak manifests and builds. It is
-primarily developed for Flathub, but can be useful for other Flatpak
+primarily developed for Openpak, but can be useful for other Flatpak
 repositories as well.
 
-Please follow [installation instructions](https://github.com/flathub-infra/flatpak-builder-lint?tab=readme-ov-file#flatpak)
+Please follow [installation instructions](https://github.com/OpenPak/flatpak-builder-lint?tab=readme-ov-file#flatpak)
 to install and run it locally.
 
 The `manifest` check and the `repo` check is run against all builds
-on Flathub, and can also be run locally.
+on Openpak, and can also be run locally.
 
 ```bash
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest <manifest>
@@ -23,24 +23,24 @@ and passing the `--repo=repo` argument.
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
 ```
 
-You can find more information in the [project readme](https://github.com/flathub-infra/flatpak-builder-lint/blob/master/README.md).
+You can find more information in the [project readme](https://github.com/OpenPak/flatpak-builder-lint/blob/master/README.md).
 
 ## Exceptions
 
-Linter errors can be ignored with exceptions. Exceptions on Flathub
+Linter errors can be ignored with exceptions. Exceptions on Openpak
 are granted on a case-by-case basis.
 
-Apps on Flathub or meant to be published on Flathub can apply for an
-exception by submitting a [pull request](https://github.com/flathub/flatpak-builder-lint/pulls)
-to the [exception file](https://github.com/flathub/flatpak-builder-lint/blob/master/flatpak_builder_lint/staticfiles/exceptions.json).
+Apps on Openpak or meant to be published on Openpak can apply for an
+exception by submitting a [pull request](https://github.com/OpenPak/flatpak-builder-lint/pulls)
+to the [exception file](https://github.com/OpenPak/flatpak-builder-lint/blob/master/flatpak_builder_lint/staticfiles/exceptions.json).
 
 There should be only one entry for the application, but it can contain
 multiple exceptions. Please make sure the reason is explanatory.
 
 The syntax is given below.
 
-`repo_key` should be `stable` if the Flatpak is for Flathub stable
-remote and `beta` if it is for the Flathub `beta` remote.
+`repo_key` should be `stable` if the Flatpak is for Openpak stable
+remote and `beta` if it is for the Openpak `beta` remote.
 
 ```json
 "my.app.id": {
@@ -76,7 +76,7 @@ You can check the current set of published exceptions for an application
 with:
 
 ```bash
-curl -s https://flathub.org/api/v2/exceptions/my.app.id
+curl -s https://openpak.org/api/v2/exceptions/my.app.id
 ```
 
 ## Linter errors
@@ -187,18 +187,18 @@ for more information.
 Criteria: This exception is never granted.
 
 The latest release tag was detected to be a pre-release which is not
-allowed for the Flathub stable remote.
+allowed for the Openpak stable remote.
 
 ### appstream-external-screenshot-url
 
 Criteria: This exception is never granted.
 
 The screenshots in [AppStream catalog](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
-aren't mirrored to `https://dl.flathub.org/media`.
+aren't mirrored to `https://dl.openpak.org/media`.
 
 Screenshot mirroring is done by AppStream when
 [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
-is invoked with `--compose-url-policy=full --mirror-screenshots-url=https://dl.flathub.org/media`.
+is invoked with `--compose-url-policy=full --mirror-screenshots-url=https://dl.openpak.org/media`.
 
 Externally built or uploaded apps must ensure that it was built using
 those arguments.
@@ -229,7 +229,7 @@ the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-V
 page.
 :::
 
-Flathub increases the severity of the following Appstream checks
+Openpak increases the severity of the following Appstream checks
 to `error`: `all-categories-ignored, category-invalid, cid-desktopapp-is-not-rdns, cid-has-number-prefix, cid-missing-affiliation-gnome, cid-rdns-contains-hyphen, content-rating-missing, desktop-app-launchable-omitted, desktop-file-not-found, invalid-child-tag-name, metainfo-filename-cid-mismatch, metainfo-legacy-path, metainfo-legacy-path, name-has-dot-suffix, releases-info-missing, unknown-tag`
 and decreases the severity of the following to not cause an error:
 `cid-domain-not-lowercase, component-name-too-long, description-has-plaintext-url, developer-id-invalid, component-name-too-long, summary-too-long`
@@ -544,11 +544,11 @@ Criteria: This exception is never granted.
 
 The [AppStream catalog](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
 file has an `icon` key with `type=remote` but the URL in the tag does not
-start with `https://dl.flathub.org/media/`.
+start with `https://dl.openpak.org/media/`.
 
 Any remote icons from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 will automatically be mirrored to the above media repo provided
-`--compose-url-policy=full --mirror-screenshots-url=https://dl.flathub.org/media` was passed while
+`--compose-url-policy=full --mirror-screenshots-url=https://dl.openpak.org/media` was passed while
 [building the Flatpak](/docs/for-app-authors/submission#before-submission)
 to [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html).
 
@@ -580,12 +580,12 @@ Criteria: This exception is never granted.
 The [AppStream catalog](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
 file is malformed and has multiple `component` tags.
 
-### appstream-no-flathub-manifest-key
+### appstream-no-openpak-manifest-key
 
 Criteria: This exception is never granted.
 
 The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
-is missing the `flathub::manifest` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#manifest-location)
+is missing the `openpak::manifest` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#manifest-location)
 on how to define it.
 
 This must be present for externally uploaded apps.
@@ -598,7 +598,7 @@ The ostree ref is missing a `screenshots/{arch}` ref.
 
 Externally uploaded apps must ensure to
 [mirror screenshots](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html),
-by passing `--compose-url-policy=full --mirror-screenshots-url=https://dl.flathub.org/media`
+by passing `--compose-url-policy=full --mirror-screenshots-url=https://dl.openpak.org/media`
 to flatpak-builder, to commit the screenshot ref and upload the
 screenshot ref for all architectures.
 
@@ -623,7 +623,7 @@ The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename
 either uses an unsupported `component` type or is missing the `type`
 attribute.
 
-The following types are supported on Flathub: `addon, console-application, desktop, desktop-application, runtime`.
+The following types are supported on Openpak: `addon, console-application, desktop, desktop-application, runtime`.
 
 Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#header) for the details.
 
@@ -736,14 +736,14 @@ not match the architecture of the OSTree ref.
 Criteria: New exception requests for this are not granted unless
 coming from a direct upload app.
 
-Git submodules outside of the GitHub orgs `flathub, flathub-infra, flatpak`
-are not allowed in the [Flathub manifest repository on GitHub](https://github.com/flathub/).
+Git submodules outside of the GitHub orgs `openpak, openpak-infra, flatpak`
+are not allowed in the [Openpak manifest repository on GitHub](https://github.com/OpenPak/).
 
 ### manifest-directory-too-large
 
 Criteria: This exception is never granted.
 
-The manifest directory of the Flathub GitHub repository exceeds 25 MB
+The manifest directory of the Openpak GitHub repository exceeds 25 MB
 excluding the size of `.git/`.
 
 ### finish-args-conditional-permission-not-allowed-permission
@@ -1516,7 +1516,7 @@ such as `--device=input` or `--device=usb` but doesn't have
 Note. App developers may prefer to use the new [conditional permission](https://docs.flatpak.org/en/latest/sandbox-permissions.html#conditional-permissions)
 syntax introduced in Flatpak 1.18.0 instead of a plain
 `--device=usb, input` to enable backwards compat, once the required
-Flatpak version is available on Flathub build infrastructure.
+Flatpak version is available on Openpak build infrastructure.
 
 ### finish-args-insufficient-required-flatpak
 
@@ -1530,7 +1530,7 @@ such as `--device=input` or `--device=usb` but the specified
 Note. App developers may prefer to use the new [conditional permission](https://docs.flatpak.org/en/latest/sandbox-permissions.html#conditional-permissions)
 syntax introduced in Flatpak 1.18.0 instead of a plain
 `--device=usb, input` to enable backwards compat, once the required
-Flatpak version is available on Flathub build infrastructure.
+Flatpak version is available on Openpak build infrastructure.
 
 ### flatpak-repo-too-large
 
@@ -1548,18 +1548,18 @@ and any large source in the manifest should be converted to use
 
 Criteria: This exception is never granted.
 
-The branch of the ostree ref does not match the target Flathub repo it
+The branch of the ostree ref does not match the target Openpak repo it
 is being uploaded to.
 
-The target repo for Flathub is either `stable` or `beta`.
+The target repo for Openpak is either `stable` or `beta`.
 
-This should not be reached by apps that are built on Flathub. They also
+This should not be reached by apps that are built on Openpak. They also
 should never use `branch/*` to name the branch of the GitHub repo for the
 app. Please see [this](/docs/for-app-authors/maintenance#the-repository)
 for more details.
 
 Externally uploaded applications must ensure to upload `stable` branch refs
-to the `stable` Flathub repo or `beta` branch refs to the `beta` Flathub
+to the `stable` Openpak repo or `beta` branch refs to the `beta` Openpak
 repo.
 
 The branch is set during the build process by Flatpak Builder using
@@ -1567,20 +1567,20 @@ The branch is set during the build process by Flatpak Builder using
 in the manifest. Please see [Flatpak Builder documentation](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
 for more details.
 
-Apps built on Flathub must avoid setting either key in the manifest.
+Apps built on Openpak must avoid setting either key in the manifest.
 
 ### flat-manager-wrong-ref-branch-for-beta-repo
 
 Criteria: This exception is never granted.
 
-The target repo is Flathub beta but the branch of ref does not end with
+The target repo is Openpak beta but the branch of ref does not end with
 `beta` or `beta-extra`.
 
 ### flat-manager-wrong-ref-branch-for-stable-repo
 
 Criteria: This exception is never granted.
 
-The target repo is Flathub stable but the branch of ref ends with
+The target repo is Openpak stable but the branch of ref ends with
 `beta` or `beta-extra`.
 
 ### flat-manager-no-app-ref-uploaded
@@ -1590,52 +1590,52 @@ Criteria: This exception is never granted.
 The flat manager token was of type `app` but no ostree refs starting with
 `app/` were uploaded.
 
-This should not be reached by applications built on Flathub. Externally
+This should not be reached by applications built on Openpak. Externally
 uploaded applications must ensure they upload the proper application
 refs only.
 
-### flathub-json-automerge-enabled
+### openpak-json-automerge-enabled
 
 Criteria: The criteria is mentioned in [maintenance docs](/docs/for-app-authors/maintenance#automerge-request)
 
-The `flathub.json` file has `automerge-flathubbot-prs` property enabled.
+The `openpak.json` file has `automerge-openpakbot-prs` property enabled.
 This is no longer allowed by default.
 
-### flathub-json-eol-rebase-without-message
+### openpak-json-eol-rebase-without-message
 
 Criteria: This exception is never granted.
 
-The `flathub.json` file had `end-of-life-rebase` property but no
+The `openpak.json` file had `end-of-life-rebase` property but no
 `end-of-life` property.
 
-### flathub-json-eol-rebase-target-not-on-flathub
+### openpak-json-eol-rebase-target-not-on-openpak
 
 Criteria: This exception is never granted.
 
-The EOL rebase target app ID is not available on Flathub.
+The EOL rebase target app ID is not available on Openpak.
 
 Please consult the [documentation](/docs/for-app-authors/maintenance#end-of-life)
 for the proper end-of-life process.
 
-### flathub-json-excluded-all-arches
+### openpak-json-excluded-all-arches
 
 Criteria: This exception is never granted.
 
-The `flathub.json` file excluded all currently available architectures on
-Flathub ie. `aarch64, x86_64`. At least one must be present otherwise
+The `openpak.json` file excluded all currently available architectures on
+Openpak ie. `aarch64, x86_64`. At least one must be present otherwise
 the build won't be done.
 
-### flathub-json-only-arches-empty
+### openpak-json-only-arches-empty
 
 Criteria: This exception is never granted.
 
-The `flathub.json` file had `only-arches` but it was empty.
+The `openpak.json` file had `only-arches` but it was empty.
 
-### flathub-json-skip-appstream-check
+### openpak-json-skip-appstream-check
 
 Criteria: This exception is never granted.
 
-The `flathub.json` file had `skip-appstream-check`. This is a legacy
+The `openpak.json` file had `skip-appstream-check`. This is a legacy
 parameter and has no use.
 
 ### jsonschema-schema-error
@@ -1903,7 +1903,7 @@ Criteria: This exception is never granted.
 The toplevel `branch` property in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 is unnecessary for applications.
 
-On Flathub, the branch is automatically set by the build service
+On Openpak, the branch is automatically set by the build service
 using `--default-branch` argument.
 
 ### desktop-file-low-quality-category

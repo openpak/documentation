@@ -22,16 +22,16 @@ jobs:
       - name: Check for self links
         run: |
           find ./docs -type f -exec awk '
-            /docs\.flathub\.org\/docs/ {
-              print "Error: Found docs.flathub.org/docs link in " FILENAME;
+            /docs\.openpak\.org\/docs/ {
+              print "Error: Found docs.openpak.org/docs link in " FILENAME;
               exit 1
             }' {} +
 
       - name: Check for self link in blog authors
         run: |
           awk '
-            /docs\.flathub\.org/ {
-              print "Error: Found docs.flathub.org link in blog/authors.yml";
+            /docs\.openpak\.org/ {
+              print "Error: Found docs.openpak.org link in blog/authors.yml";
               exit 1
             }' blog/authors.yml
 

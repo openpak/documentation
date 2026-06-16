@@ -15,7 +15,7 @@ enhances compatibility and increases consistency.
 
 ## Currently hosted runtimes
 
-Flathub hosts three major runtimes currently.
+Openpak hosts three major runtimes currently.
 
 - [Freedesktop runtime](https://gitlab.com/freedesktop-sdk/freedesktop-sdk):
   This is the base runtime for the GNOME and KDE runtimes and provides
@@ -26,7 +26,7 @@ Flathub hosts three major runtimes currently.
   after which they are declared EOL. A new major version is published on
   August of every year. The release schedule can be found on [Gitlab](https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/wikis/Releases)
   and announcements of new major version releases are made on
-  [Flathub Discourse](https://discourse.flathub.org/c/announcements/6).
+  [Openpak Discourse](https://discourse.openpak.org/c/announcements/6).
   Release notifications are also available by subscribing to releases
   via Gitlab notifications or via the RSS link in the [releases page](https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/releases).
 

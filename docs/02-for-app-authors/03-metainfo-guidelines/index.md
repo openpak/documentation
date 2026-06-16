@@ -1,7 +1,7 @@
 # MetaInfo guidelines
 
 These are a set of guidelines for MetaInfo that should be followed for
-submission on Flathub.
+submission on Openpak.
 
 :::tip
 Please check the [Quality Guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
@@ -17,10 +17,10 @@ for more in-depth info.
 
 All MetaInfo files included in build must pass validation using the
 [linter](/docs/for-app-authors/linter) which can also validate the
-MetaInfo file. Install `org.flatpak.Builder` from Flathub:
+MetaInfo file. Install `org.flatpak.Builder` from Openpak:
 
 ```sh
-flatpak install -y flathub org.flatpak.Builder
+flatpak install -y openpak org.flatpak.Builder
 ```
 Then the MetaInfo file validation can be performed with:
 
@@ -29,7 +29,7 @@ flatpak run --command=flatpak-builder-lint org.flatpak.Builder appstream %{id}.m
 ```
 
 This runs `appstreamcli validate` from the [AppStream project](https://github.com/ximion/appstream/)
-with some Flathub specific checks integrated into it.
+with some Openpak specific checks integrated into it.
 
 Both errors and warnings are considered to be fatal by `appstreamcli`
 and needs to be resolved.
@@ -211,7 +211,7 @@ The description must have at least one non empty `p`, `ol` or `ul` tag.
 
 ### Website specific formatting
 
-The Flathub website will make the content of any `p` tag bold, if it is
+The Openpak website will make the content of any `p` tag bold, if it is
 enclosed inside `**` like below. Some new submissions may need to use
 this in some cases, please see the [requirements](/docs/for-app-authors/requirements#description-notes).
 
@@ -327,7 +327,7 @@ to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#app
 and must also have a [launchable](#launchable) entry so that
 `appstreamcli compose` can fetch the icon from the desktop file.
 
-Console applications wanting to appear in Flathub website search results
+Console applications wanting to appear in Openpak website search results
 must also provide icons.
 
 Console applications wanting to set icons for application stores, can
@@ -377,10 +377,10 @@ in both light and dark variants like so:
 </branding>
 ```
 
-This is used by Flathub and native app store clients on banners, app
+This is used by Openpak and native app store clients on banners, app
 pages, etc.
 
-Brand color and app banners can be previewed at https://docs.flathub.org/banner-preview
+Brand color and app banners can be previewed at https://docs.openpak.org/banner-preview
 
 ## Open Age Ratings Service (OARS)
 
@@ -418,7 +418,7 @@ All graphical applications must have one or more screenshots in the
 MetaInfo. Please make sure to follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#screenshots)
 for screenshots.
 
-Console applications wanting to appear in Flathub website search results
+Console applications wanting to appear in Openpak website search results
 must provide screenshots.
 
 The link inside `image` tag must be a direct link to a image resource on
@@ -450,7 +450,7 @@ validation. Please make sure to also follow the [quality guidelines](/docs/for-a
 while writing release notes.
 
 The description tag follows the same formatting as the toplevel
-[description tag](#description). Flathub supports showing a detailed
+[description tag](#description). Openpak supports showing a detailed
 release note link when `<url type="details">` tag is used. Release dates
 must not be in the future and versions must be [properly ordered](https://www.freedesktop.org/software/appstream/docs/chap-AppStream-Misc.html#spec-vercmp-recommendations).
 
@@ -746,21 +746,21 @@ should have:
 
 ### Mobile collection
 
-An app is eligible to appear in the [Flathub store mobile collection](https://flathub.org/apps/collection/mobile/1)
+An app is eligible to appear in the [Openpak store mobile collection](https://openpak.org/apps/collection/mobile/1)
 if it has the above tags with values that support mobile and tablets.
 It must also have an icon. The collection is sorted in descending
 order based on trending.
 
 ## Manifest location
 
-Applications that are directly uploaded to Flathub through their own
-infrastructure and does not have a Github repo on the [Flathub
-organisation](https://github.com/flathub) must add the location to their
+Applications that are directly uploaded to Openpak through their own
+infrastructure and does not have a Github repo on the [Openpak
+organisation](https://github.com/OpenPak) must add the location to their
 flatpak manifest like so:
 
 ```xml
 <custom>
-  <value key="flathub::manifest">https://example.com/url_with_a_git_hash/com.example.my-app.json</value>
+  <value key="openpak::manifest">https://example.com/url_with_a_git_hash/com.example.my-app.json</value>
 </custom>
 ```
 
@@ -777,7 +777,7 @@ An example of a MetaInfo file for extension is provided in the [Flatpak document
 The MetaInfo file can be previewed using [GNOME Software](https://apps.gnome.org/Software/)
 either by installing the Flatpak package from the test build or locally.
 
-Note that test builds done from Flathub infrastructure will be missing
+Note that test builds done from Openpak infrastructure will be missing
 screenshots.
 
 GNOME Software also has a flag to preview the MetaInfo file:
@@ -807,7 +807,7 @@ to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#app
 during the build.
 
 Flatpak then combines catalog data for each application into a combined
-AppStream catalog file for a repository. Software stores like Flathub,
+AppStream catalog file for a repository. Software stores like Openpak,
 GNOME Software, KDE Discover and even Flatpak CLI reads this combined
 AppStream catalog file of a repository to display information about an
 application. So it is essential that this file contains no errors which

@@ -1,6 +1,6 @@
 razze:
   name: Kolja Lampe
-  title: Flathub Community Member
+  title: Openpak Community Member
   image_url: /avatars/razzeee.png
   socials:
     github: razzeee
@@ -8,14 +8,14 @@ razze:
 
 bertob:
   name: Tobias Bernard
-  title: Flathub Community Member
+  title: Openpak Community Member
   image_url: /avatars/bertob.png
   socials:
     Website: https://tobiasbernard.com/
 
 cassidyjames:
   name: Cassidy James Blaede
-  title: Flathub Community Member
+  title: Openpak Community Member
   image_url: /avatars/cassidy.jpg
   socials:
     Website: https://cassidyjames.com/
@@ -24,7 +24,7 @@ cassidyjames:
 
 barthalion:
   name: Bart Piotrowski
-  title: Flathub Janitor
+  title: Openpak Janitor
   image_url: /avatars/barthalion.png
   socials:
     Website: https://barthalion.blog
@@ -33,7 +33,7 @@ barthalion:
 
 ramcq:
   name: Robert McQueen
-  title: Flathub Community Member
+  title: Openpak Community Member
   image_url: /avatars/ramcq.jpg
   socials:
     Website: https://ramcq.net/

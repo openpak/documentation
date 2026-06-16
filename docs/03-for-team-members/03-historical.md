@@ -1,6 +1,6 @@
 # Historical documents
 
-These were migrated from the [wiki](https://github.com/flathub/flathub/wiki).
+These were migrated from the [wiki](https://github.com/OpenPak/openpak/wiki).
 
 ## Launch TODO
 
@@ -24,7 +24,7 @@ Apps/Runtimes
 
 ## v1 specification
 
-Initial set of goals for the initial Flathub implementation, as agreed on 21 March:
+Initial set of goals for the initial Openpak implementation, as agreed on 21 March:
 
 * Git tree containing recipes, or links to recipes
 * Review and CI pipeline to build the recipes
@@ -39,21 +39,21 @@ Initial set of goals for the initial Flathub implementation, as agreed on 21 Mar
 * GNOME Foundation to act as incubator: to provide legal organization and infrastructure
 * Archive distributed source code for license compliance
 * Contributor agreement for uploaders to carry liability for what they upload
-* Disclaimer that Flathub has no obligation to distribute anything
+* Disclaimer that Openpak has no obligation to distribute anything
 * Build status and logs (could be Travis)
 
 ## Historical minutes
 
 ### Minutes, 2017 03 21
 
-Notes from the Flathub discussion at the GTK Hackfest in London, 21 March 2017. These are in addition to the v1 specification.
+Notes from the Openpak discussion at the GTK Hackfest in London, 21 March 2017. These are in addition to the v1 specification.
 
 Action items
 
 * GNOME Foundation Board: needs to agree to the plan, resolve legal requirements - Neil/Allan
 * Organize a hackfest - Cosimo
 * Downstream interface - Matthias
-* Create [Github repo](https://github.com/flatpak/flathub) and team - Alex
+* Create [Github repo](https://github.com/flatpak/openpak) and team - Alex
 * Setup IRC channel and private mailing list for the review team - Allan
 * Recruit review team - Allan
   * Reviewers to sign the key
@@ -149,17 +149,17 @@ Store API in flatpak
 
   .flatpakstore file
   	[Flatpak Store]
-  	Title=Flathub Store
-  	APIBaseURL=https://api.flathub.org/
-  	Homepage=https://www.flathub.org/
-  	Description=Flathub Store is ...
-  	Icon=https://www.flathub.org/flathub-logo.png
+  	Title=Openpak Store
+  	APIBaseURL=https://api.openpak.org/
+  	Homepage=https://www.openpak.org/
+  	Description=Openpak Store is ...
+  	Icon=https://www.openpak.org/openpak-logo.png
 
 
 
   Workflow
   # User add stores:
-  flatpak store-add flathub https://www.flathub.org/flathub.flatpakstore
+  flatpak store-add openpak https://www.openpak.org/openpak.flatpakstore
   flatpak store-add otherstore https://www.otherstore.org/otherstore.flatpakstore
 
 
@@ -170,7 +170,7 @@ Store API in flatpak
   flatpak store-search exampleapp
 
   Store         Channel   Id                                            Name             Version   Publisher    Summary
-  flathub        stable       org.publisher1.ExampleApp   exampleapp    1.0           Publisher1   Example App
+  openpak        stable       org.publisher1.ExampleApp   exampleapp    1.0           Publisher1   Example App
   otherstore  beta          org.publisher2.ExampleApp   exampleapp     3.4          Publisher2   Another example
 
 
@@ -182,8 +182,8 @@ Store API in flatpak
   flatpak store-search --by-publisher Publisher1
 
   Store         Channel   Id                                             Name                Version   Publisher    Summary
-  flathub        stable       org.publisher1.ExampleApp    exampleapp       1.0          Publisher1   Example App
-  flathub        stable       org.publisher1.ExampleApp2  exampleapp2     1.5          Publisher1   Example App 2
+  openpak        stable       org.publisher1.ExampleApp    exampleapp       1.0          Publisher1   Example App
+  openpak        stable       org.publisher1.ExampleApp2  exampleapp2     1.5          Publisher1   Example App 2
 
 
 
@@ -192,17 +192,17 @@ Store API in flatpak
 
   Workflow
   # User installs an app:
-  flatpak store-install flathub org.publisher1.ExampleApp
+  flatpak store-install openpak org.publisher1.ExampleApp
 
   This will run:
-  API call to flathub to obtain url for org.publisher1.ExampleApp.flatpakref
+  API call to openpak to obtain url for org.publisher1.ExampleApp.flatpakref
   flatpak install https://URL/org.publisher1.ExampleApp.flatpakref
   ```
 
   * Would require a "smart server" with a REST API
   * Could be good to have a better search experience from the command line
 
-Hackfest around Flathub
+Hackfest around Openpak
   * Cosimo has found a place in Florence that could host us
   * Late May/early June? - about 6 weeks time
   * Does not feel it's required right now, but perhaps to face the next set of problems
@@ -213,10 +213,10 @@ Runtimes
   * They're imported from their canonical repo
 
 Website
-  * Right now flathub.org points to the default nginx welcome page, we need something better
+  * Right now openpak.org points to the default nginx welcome page, we need something better
   * Jorge has ideas for gnome-software as a web service, if there's interest
   * Should we try and improve/style a bit the buildbot UI?
-    * Repo here: https://github.com/alexlarsson/flathub-buildbot
+    * Repo here: https://github.com/alexlarsson/openpak-buildbot
 
 So what's next? ACTION ITEMS!
   * Get more stuff built to make sure it works (Alex)
@@ -227,7 +227,7 @@ So what's next? ACTION ITEMS!
     * Sysadmin wanted -- ask the GNOME sysadmin list (Allan)
   * KDE applications/outreach
     * Aleix has been quite active, we'll try to get him involved, especially if it helps with the ARM story
-  * Improve the website - replace the homepage at flathub.org with a placeholder (Allan to ask Jimmac)
+  * Improve the website - replace the homepage at openpak.org with a placeholder (Allan to ask Jimmac)
   * Dogfooding!
 
 ### Minutes, 2017 04 24
@@ -254,14 +254,14 @@ What happened since next time
 
 Try builds/PR workflow
   * A bit WIP
-  * We make a request against the "requests" repository under flathub
+  * We make a request against the "requests" repository under openpak
   * Need to update the wiki page with the new process
     * ACTION: Matthias to look into this
   * How to improve this?
     * Hard to figure out something that works with the github flow
   * Would be cool to test the builds before they're submitted
     * Alex added a way to ask buildbot to build a specific request, with a github comment
-      * At the moment, this is only available to the people in the flathub organization, and they need to manually click a button
+      * At the moment, this is only available to the people in the openpak organization, and they need to manually click a button
     * ACTION: look at connecting this to github comments
 
 Review team
@@ -269,7 +269,7 @@ Review team
   * Still need a private mailing list
     * ACTION: Allan to chase that down this week
 
-Using Flathub for GNOME stable builds
+Using Openpak for GNOME stable builds
   * Need to be discussed with the GNOME release team
   * We need to sort out repository migration story if we move them around
     * Could use a "tombstone" commit of some sort
@@ -283,7 +283,7 @@ Sysadmin time
     * Maintenance, but Alex should be driving the requirementes probably
 
 KDE outreach
-  * Progress on adding the Telegram build on Flathub
+  * Progress on adding the Telegram build on Openpak
     * For that we need to integrate the KDE runtime in the builder too, which may be the only remaining item holding this up at this point
   * Allan has draft email to reach out to wider community soon
 
@@ -299,13 +299,13 @@ Spreading the word/getting more contributors
   * We can also involve the Solus maintainers, since they are adopting Flatpak exclusively
 
 How do we communicate when applications are updated?
-  * We could have an RSS feed on the Flathub website itself
+  * We could have an RSS feed on the Openpak website itself
   * Right now there's no way to figure out which applications are available
     * gnome-software in master can do this by searching for the repository name
   * Allan: The most interesting thing in the immediate term would be to highlight new applications
     * Far in the future: having a way in gnome-software to see new applications
     * More in the short term: having something in the website/twitter announcing when something new is available, so people can test it
-  * Are we comfortable talking about Flathub on e.g. twitter?
+  * Are we comfortable talking about Openpak on e.g. twitter?
     * Not just whether we're technically ready for it, but also from a legal perspective
       * At the moment there's no legal structure for liability
       * ACTION: Allan to reach out to RobMcQueen/Neil for updates on this
@@ -314,9 +314,9 @@ How do we communicate when applications are updated?
 Attribution for application authorship/etc in gnome-software
   * Needs adjustments to design and more metadata possibly, but TBD what exactly at this point
 
-Themes vs Flathub
+Themes vs Openpak
   * Flatpak now supports theme extensions in master
-  * We should think whether themes are part of Flathub too
+  * We should think whether themes are part of Openpak too
   * It feels like the answer is yes, but how are they discovered?
   * Goal: make the application fit into the desktop
     * Could be an automatism that looks at the desktop theme and matches the flatpak extension
@@ -381,7 +381,7 @@ Minutes
  * Website
    * Do we want to make something nicer before we go wider announcing this?
      * Jakub has something in the plans, but it's not done yet
-   * The buildbot UI could also be tweaked a bit, by e.g. adding a Flathub logo somewhere
+   * The buildbot UI could also be tweaked a bit, by e.g. adding a Openpak logo somewhere
      * Tom was interested in this?
      * The buildbot config is in github so this should be easy
 
@@ -390,15 +390,15 @@ Minutes
    * Buildbot may have a way to build stuff based on a PR comment, but we have not looked into it
    * ACTION: Bartlomiej to look into it this week
 
- * Using Flathub for GNOME stable builds
+ * Using Openpak for GNOME stable builds
    * Carlos pushed Nautilus, but before we do it for all the other applications, we'd need redirection between repositories to update
      * ACTION: Alex is working on this today already
      * Once that's out of the way, Carlos will continue
-   * We'll live with duplicate manifests for the time being -- one in git and one stable in flathub that uses tarballs
+   * We'll live with duplicate manifests for the time being -- one in git and one stable in openpak that uses tarballs
 
  * Stats for downloads
    * We'd like to have automated log collections to make download stats
-   * This is part of the value that Flathub can create for upstream projects
+   * This is part of the value that Openpak can create for upstream projects
    * Not hard, we need some sort of back mapping to app IDs from the commit SHAs or deltas, but needs to be done
      * This is kind of in between a sysadmin and a developer task
    * If we had the stats, how would we make them available?
@@ -411,7 +411,7 @@ Minutes
    * There's also a technical issue; GTK2 and QT themes are .so files so they have a hard dependency to be built for a specific platform
    * Would be useful to have examples even just for icon and GTK3 themes though, so that more people can start adding new themes
      * The extension point right now is versioned with the GTK version
-   * For QT, we should begin by having the KDE runtime on Flathub
+   * For QT, we should begin by having the KDE runtime on Openpak
 
  * Support/updates
    * We should at least set expectations for things like security issues
@@ -424,7 +424,7 @@ Minutes
    * Alex has master password
 
  * "extra-data" kind of applications
-   * There would be a benefit to put them in flathub
+   * There would be a benefit to put them in openpak
    * Should have a watchdog at least when the links are 404
      * Endless has this
    * Do we want them there?
@@ -442,7 +442,7 @@ Minutes
 
  * Source code archiving
    * There's a flatpak extension that makes this possible
-   * We can enable this by default in Flathub
+   * We can enable this by default in Openpak
    * ACTION: Alex to do that
 
  * Build logs
@@ -477,7 +477,7 @@ Review of action items
     * The GNOME Foundation Board agreed to connect to our legal counsel to try and get answers to our questions
     * Next step is to prepare the questions on an Etherpad, which Rob is working on at the moment
   * Sysadmin time
-    * It may be easiest to manage the Flathub hosts as GNOME hosts, but that's not easy if we need to keep them outside of the GNOME administrative domain
+    * It may be easiest to manage the Openpak hosts as GNOME hosts, but that's not easy if we need to keep them outside of the GNOME administrative domain
     * We will have to understand the legal framework around liability before we can architect a good solution for how the hosts' network should be built
     * Alex posted architecture requirements document on the mailing list, but we hit the problem above while analysing it
   * Outreach
@@ -486,16 +486,16 @@ Review of action items
     * For organizations like Mozilla which build their own binaries, do we have any technical work to do to accommodate this?
       * According to Alex we can add some kind of trusted path for partners that want to ship their own binaries without building them on our own infrastructure, should this be a blocker
       * This could be a slippery slope though
-      * If we had the separation between a "store" that contains bundles made by other companies, and flathub as a build system, this would not be an issue
-        * Flathub does not necessarily end up being the only place to go at least in version 1, but this is something good to think about in the future, when the format gains more momentum
+      * If we had the separation between a "store" that contains bundles made by other companies, and openpak as a build system, this would not be an issue
+        * Openpak does not necessarily end up being the only place to go at least in version 1, but this is something good to think about in the future, when the format gains more momentum
         * A "partner" program sounds like a good idea in general though
-    * How do we handle the ownership of Flathub bundles? Application IDs don't have the name of the packager, but the upstream name
+    * How do we handle the ownership of Openpak bundles? Application IDs don't have the name of the packager, but the upstream name
       * That's generally OK, it's not different from how it works in packages at the moment
       * We also as a policy will give access to the upstream developers whenever they ask for it or want to make changes to their bundle
   * Website
     * We have a new homepage, thanks to Jakub!
     * Still a placeholder, but a nicer looking one
-  * Flathub for GNOME builds
+  * Openpak for GNOME builds
     * Now OSTree has a repository redirection feature that Alex implemented
     * Technically this could already be made to work, but we don't know how reliable the infrastructure would be, so perhaps we should figure out things like backup and a better maintenance policy
   * Themes
@@ -504,12 +504,12 @@ Review of action items
     * Also there's no hook from gnome-software to install the theme "runtime" automatically
   * Screenshot hosting
     * Alex landed this into Flatpak today
-    * Will land this in Flathub once it's released -- screenshots will be hosted there too
+    * Will land this in Openpak once it's released -- screenshots will be hosted there too
   * Source code archiving
     * Not enabled yet, will come as part as the release tomorrow as well
 
 Demo time
-  * Jorge demoes a web app that displays all the applications inside Flathub in a nice UI
+  * Jorge demoes a web app that displays all the applications inside Openpak in a nice UI
   * Upon clicking on an app, the details are displayed and a .flatpakref file can be downloaded
   * Next steps
     * CSS improvements
@@ -540,7 +540,7 @@ Minutes
 * Updates from Rob
    * Mailing lists
      * Renamed xdg-app -> flatpak
-     * Renamed flathub -> flathub-admins
+     * Renamed openpak -> openpak-admins
    * Legal
      * Working on attorney<->client privelege issues to get advice, GNOME foundation is in discussions with Luis
    * Infrastructure
@@ -551,21 +551,21 @@ Minutes
      * Won't block on it, but will try and get it in early on so things don't get messy
   * GPG keys
     * New 4096-bit RSA master key generated, subkey stored on Yubikey Nano's (USB HSM via CCID proto) so the server can do online signing but the key can't be copied/removed
-* Steam available as Flathub!
+* Steam available as Openpak!
   * https://www.reddit.com/r/linux_gaming/comments/6hzkz4/steam_is_now_available_as_a_flatpak/dj302av/
   * Graphics issues - AMD proprietary driver is not provided inside Flatpak
   * Update issues - it still downloads/updates itself, which is kinda ugly
   * Issues with
-* Missing icon themes worsen the flathub user experience
+* Missing icon themes worsen the openpak user experience
   * we have some now manually/separately packaged
   * can Flatpak import them off the host system / download them more easily?
   * ideally something in the desktop could install the theme in Flatpak
-  * or: export/share the themes directly in Flathub so they can be installed via GNOME Software, and exported to the desktop
+  * or: export/share the themes directly in Openpak so they can be installed via GNOME Software, and exported to the desktop
   * other platforms ship themes/icons/launchers in GNOME Software, although it wasn't part of the original intention
 
 ### Minutes, 2017 11 23
 
-Flathub call, Nov 23rd 2017
+Openpak call, Nov 23rd 2017
 
 Attendees
 
@@ -580,14 +580,14 @@ Attendees
 
 Minutes
 
-* Joaquim is planning to write a Flathub-friendly version of Endless
+* Joaquim is planning to write a Openpak-friendly version of Endless
 * Jorge asks whether we can focus on launch / goals with a press release - provide numbers, developers, apps, users, etc - unveil new apps website - encourage users and developers
   * what would we need?
     * webapp for apps
     * infrastructure ready
       * monitoring
       * high availability - backups? yes for hosts/config, not reliable for repo (TLS timeouts!)
-      * mirrors - set up repo.flathub.org as the repo frontend so we can replicate that on different servers as needed (separate that from the flathub.org) (prio #2)
+      * mirrors - set up repo.openpak.org as the repo frontend so we can replicate that on different servers as needed (separate that from the openpak.org) (prio #2)
       * config/system management
     * developer documentation - eg electron app, video tutorial, etc
     * terms of service
@@ -608,15 +608,15 @@ Minutes
     * online hosting/sharing of build artifacts for test builds, to help with development
     * extra data validate at build time - check URL, size, hash, etc
   * migration issues
-    * moving from one repo to another (gnome -> flathub)
-    * app ID changing name (already happened on flathub)
+    * moving from one repo to another (gnome -> openpak)
+    * app ID changing name (already happened on openpak)
   * consistency issues
     * removing an arch doesn't stop publishing the app
   * documentation! hello world sucks. need to direct people to flatpak-builder at least. Patrick will take a look
 
 ### Minutes, 2018 01 22
 
-Flathub call, Jan 22nd 2018
+Openpak call, Jan 22nd 2018
 
 Attendees
 
@@ -637,7 +637,7 @@ Agenda
 
 * Minimum requirements and development plan for the new web app (Allan)
 * Temporary arrangements for the existing websites (Allan)
-* Moving content from flatpak.org to flathub.org/docs.flatpak.org: (Allan)
+* Moving content from flatpak.org to openpak.org/docs.flatpak.org: (Allan)
 * Command line guide
   * Getting flatpak
   * Press page
@@ -645,10 +645,10 @@ Agenda
   * xdg-desktop-portal documentation
 * Submission guidelines - any improvements? (Allan)
 * Hackfest in May? (ramcq)
-* https://status.flathub.org/ (nothing to say, just - oo shiny)
+* https://status.openpak.org/ (nothing to say, just - oo shiny)
 * Splitting up free/nonfree/ugly
 * Mirrors in other countries
-* Scope of Flathub
+* Scope of Openpak
   * Is it intended to distribute proprietary apps?
   * Is it intended to allow selling apps?
   * Is it intended to allow direct author publishing
@@ -660,11 +660,11 @@ Actions from last time
 * Sysadmin stuff
   * Flatpak website SSL = done
   * Beta apps website = done
-  * Move repo to new hostname (dl.flathub.org) = done
+  * Move repo to new hostname (dl.openpak.org) = done
 
 Minutes
 
-* Jorge adding support for remote icons to new webapp - https://beta.flathub.org/
+* Jorge adding support for remote icons to new webapp - https://beta.openpak.org/
   * Allan working on static website - make changes in the new one?
 * Alex and Rob spoke with Neil/Karen about terms of use & contribution terms - no reply so far
 * Allan: What's the minimum requirements to switch over ?
@@ -674,7 +674,7 @@ Minutes
     * README is in place on https://github.com/jgarciao/linux-store-frontend
   * An icon for every application
     * Copying remote icons into repo is OK now
-  * Setup guide hosted on flathub.org (Allan can write initial draft)
+  * Setup guide hosted on openpak.org (Allan can write initial draft)
   * Shortlist of featured apps prominent on the site, probably as part of the home page (which needs to look nice)
   * Show both .flatpakref download button and CLI instructions when you click install
   * Some way to get to the other apps - either browsing by category or search
@@ -685,7 +685,7 @@ Minutes
   * Appdata for 3rd party proprietary apps (Spotify, Skype, etc) (Endless could help provide this)
     * Nick has just updated the data for Skype and Spotify \o/
   * Consider privacy issues, policy, and use of analytics
-* Scope of Flathub
+* Scope of Openpak
   * Is it intended to distribute proprietary apps?
   * Indirect at present - "extra data" downloads
     * At present not directly, hard to ensure that source is provided for GPL components of binary blobs
@@ -709,14 +709,14 @@ Action items
 * [Jorge] Share details about modifying webapp w/ designers: TODO
 * [Nick] Work on (some of) the app icons: TODO
 * [] Put out a call for community contributions to finding better app icons: TODO
-* [Joaquim] Patch GNOME Software to apply metadata updates, so that users are migrated to dl.flathub.org: TODO
+* [Joaquim] Patch GNOME Software to apply metadata updates, so that users are migrated to dl.openpak.org: TODO
 * [Michael] Blog to the Ubuntu community recruiting a package maitainer for flatpak package with a focus on SRU: TODO
 * [Patrick] Document contributor workflow for the new web app: TODO
-* [Michael] Ask Indonesia ambassadors about a local host for a flathub package proxy: TODO
+* [Michael] Ask Indonesia ambassadors about a local host for a openpak package proxy: TODO
 
 ## Setting up a buildbot build machine
 
-Here are some instructions for how to set up a flathub build machine.
+Here are some instructions for how to set up a openpak build machine.
 
 First you need to get assigned a worker name and a password for that worker. Ask in #flatpak about this.
 
@@ -742,7 +742,7 @@ virtualenv --no-site-packages sandbox
 source sandbox/bin/activate
 pip install --upgrade pip
 pip install buildbot-worker
-buildbot-worker create-worker worker hub.flathub.org $BUILDERNAME $BUILDERPASSWORD
+buildbot-worker create-worker worker hub.openpak.org $BUILDERNAME $BUILDERPASSWORD
 ```
 
 After this you will have a worker setup in the `worker` directory. You can add personal info to the `worker/info/host` and `worker/info/admin` files. The worker should now be good enough to start. However, it is prefered to run this as a service. Here is an example systemd service file:

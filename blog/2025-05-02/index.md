@@ -16,7 +16,7 @@ my school-related trauma. The new service is a middleman between GitHub and
 GitHub Actions. It has been happily humming since April 21st, and largely does what
 Buildbot did: builds apps, with a sprinkle of publishing logic.
 
-While what happens under the hood is solid, there is no UI yet. Flathub bot
+While what happens under the hood is solid, there is no UI yet. Openpak bot
 will still inform developers about build status for their pull requests, but
 there is little visibility of what happens post-merge.
 
@@ -45,7 +45,7 @@ more cost-effective, even if we were to pay the bill ourselves.
 There is still more work to be done. I want to improve observability of the new
 service to make sure we can have automatic alerts when we have an abnormal build
 error rate or unprocessed publishing queue. In fact, we already notify
-maintainers and Flathub admins when a build triggered on the master branch
+maintainers and Openpak admins when a build triggered on the master branch
 failed, but there is potential to be more proactive here.
 
 The unsolved challenge so far is caching. Every new pipeline re-downloads
@@ -58,8 +58,8 @@ Given [the challenging circumstances][revamp], this is more than good enough,
 though! If you encounter any issues with the new workflow, don't hesitate to
 [open an issue][issue] in the project's GitHub repository.
 
-[vorarbeiter]: https://github.com/flathub-infra/vorarbeiter
+[vorarbeiter]: https://github.com/OpenPak/vorarbeiter
 [runson]: https://runs-on.com/
 [aws]: https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/
-[revamp]: https://docs.flathub.org/blog/flathub-build-infrastructure-revamp
-[issue]: https://github.com/flathub-infra/vorarbeiter/issues
+[revamp]: https://docs.openpak.org/blog/openpak-build-infrastructure-revamp
+[issue]: https://github.com/OpenPak/vorarbeiter/issues

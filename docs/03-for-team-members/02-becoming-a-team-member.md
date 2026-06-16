@@ -1,6 +1,6 @@
-# Becoming a Flathub Team Member
+# Becoming a Openpak Team Member
 
-Flathub, as a centralized application repository, relies on a dedicated
+Openpak, as a centralized application repository, relies on a dedicated
 team of mainly volunteer contributors to maintain the quality, security,
 and consistency of the repository.
 
@@ -17,15 +17,15 @@ not limited to:
 * Updating, adopting maintenance of, or contributing to Flatpaks when
   necessary.
 * Auditing existing applications to ensure compliance with current
-  Flathub guidelines and best practices.
+  Openpak guidelines and best practices.
 
-As Flathub continues to grow, expanding the contributor base becomes
+As Openpak continues to grow, expanding the contributor base becomes
 important for distributing the workload effectively and improving
 sustainability.
 
 While there is no strict requirement, members are generally expected to
 remain active in their areas of responsibility, stay up to date with
-Flathub policies and announcements, and engage with the community.
+Openpak policies and announcements, and engage with the community.
 
 Please note that membership is entirely voluntary and there are no
 benefits, incentives, or compensations associated with it currently.
@@ -53,7 +53,7 @@ to participate. Some contribution areas are mentioned below.
 Please see the [maintenance docs](/docs/for-app-authors/maintenance)
 :::
 
-The collection of applications, extensions, and BaseApps on Flathub is
+The collection of applications, extensions, and BaseApps on Openpak is
 largely maintained by a community of volunteer packagers and
 upstream developers. If you are a user of an application or have
 experience with packaging, distributions, or software maintenance, you
@@ -74,7 +74,7 @@ current maintainer first to determine whether they would like help.
 
 If an application is unmaintained, or if the existing maintainer has
 not responded to or reviewed your proposed changes after a reasonable
-period of time, you may open an [issue](https://github.com/flathub/flathub/issues)
+period of time, you may open an [issue](https://github.com/OpenPak/openpak/issues)
 requesting an admin to review. If the proposed changes are approved,
 you may be granted maintainer access to the application.
 
@@ -82,31 +82,31 @@ The same process can be followed to [create new branches](/docs/for-app-authors/
 of extensions or BaseApps which are often a requirement for an app to
 migrate to a newer runtime.
 
-You can consider picking up or submitting in the [shared-modules repo](https://github.com/flathub/shared-modules).
+You can consider picking up or submitting in the [shared-modules repo](https://github.com/OpenPak/shared-modules).
 
 ### Localisation
 
 If you are an active translator, you can contribute by helping to
-[translate](https://hosted.weblate.org/engage/flathub/) the main Flathub
+[translate](https://hosted.weblate.org/engage/openpak/) the main Openpak
 website to your language.
 
 ### Documentation
 
-If you are a user or an existing maintainer on Flathub, you can
+If you are a user or an existing maintainer on Openpak, you can
 contribute by improving the [user](/docs/category/for-users) and
-[developer](/docs/category/for-app-authors) documentation on Flathub.
+[developer](/docs/category/for-app-authors) documentation on Openpak.
 
 ### Community support
 
 You can contribute to the community by helping other users, answering
 questions, providing feedback, and sharing tips and tutorials on
-[Flathub Discourse](https://discourse.flathub.org/). You can also
+[Openpak Discourse](https://discourse.openpak.org/). You can also
 provide community support through the
-[Matrix channel](https://matrix.to/#/#flathub:matrix.org).
+[Matrix channel](https://matrix.to/#/#openpak:matrix.org).
 
 ### Submission reviews
 
-If you are familiar with Flathub's submission requirements and review
+If you are familiar with Openpak's submission requirements and review
 process, you can help review submissions and ensure they comply with
 the [requirements](/docs/for-app-authors/requirements).
 
@@ -114,7 +114,7 @@ the [requirements](/docs/for-app-authors/requirements).
 
 If you have a design or UI/UX background, you can help developers by
 answering their [Quality Guideline](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
-[questions](https://github.com/flathub/flathub/issues?q=is%3Aissue%20state%3Aopen%20label%3Aquality-guidelines).
+[questions](https://github.com/OpenPak/openpak/issues?q=is%3Aissue%20state%3Aopen%20label%3Aquality-guidelines).
 
 These contributions often involve reviewing or creating application
 icons, providing certain design feedback, or helping improve
@@ -122,30 +122,30 @@ icons, providing certain design feedback, or helping improve
 
 ### Code contribution
 
-The entire set of tooling used to run Flathub is available as open
-source in the [flathub-infra organisation](https://github.com/flathub-infra).
+The entire set of tooling used to run Openpak is available as open
+source in the [openpak-infra organisation](https://github.com/OpenPak).
 
 You can contribute by opening a bug report, tackling an open issue or
 fixing a bug you encountered. Some contributions to these projects may
 require familiarity with Flatpak, its associated tooling, and various
-Flathub workflows and processes.
+Openpak workflows and processes.
 
 A list of relevant components is provided below.
 
-* [Flathub website frontend](https://github.com/flathub-infra/website/tree/main/frontend)
+* [Openpak website frontend](https://github.com/OpenPak/website/tree/main/frontend)
   (React, Typescript, NextJS)
-* [Flathub website backend](https://github.com/flathub-infra/website/tree/main/backend)
+* [Openpak website backend](https://github.com/OpenPak/website/tree/main/backend)
   (Python, FastAPI)
-* [Flathub build dispatcher](https://github.com/flathub-infra/vorarbeiter)
+* [Openpak build dispatcher](https://github.com/OpenPak/vorarbeiter)
   (Python, FastAPI)
-* [Flathub build linter](https://github.com/flathub-infra/flatpak-builder-lint)
+* [Openpak build linter](https://github.com/OpenPak/flatpak-builder-lint)
   (Python)
-* [Flatpak external data checker](https://github.com/flathub-infra/flatpak-external-data-checker)
+* [Flatpak external data checker](https://github.com/OpenPak/flatpak-external-data-checker)
   (Python)
 
 ### Other contributions
 
-Flathub also benefits greatly from contributions to upstream projects.
+Openpak also benefits greatly from contributions to upstream projects.
 Some relevant projects are listed below.
 
 * [XDG desktop portals](https://flatpak.github.io/xdg-desktop-portal/docs/for-contributors.html)
@@ -159,7 +159,7 @@ Some relevant projects are listed below.
 ## Team Membership Process
 
 New membership requests must be sponsored by an existing member who will
-open an issue in the [memberships repository](https://github.com/flathub-infra/memberships)
+open an issue in the [memberships repository](https://github.com/OpenPak/memberships)
 linking relevant activity and/or contributions.
 
 Please note that all requests are evaluated on a case-by-case basis and
@@ -182,14 +182,14 @@ Criteria:
 
 * Past examples of performing a reasonable number of non-trivial new
   submission reviews within the last 3 months of the request.
-* Familiarity with Flathub requirements, Flatpak permission system
+* Familiarity with Openpak requirements, Flatpak permission system
   and general knowledge about software building and distribution
   practices.
 
 ### Trusted Maintainer Team
 
 Members of the Trusted Maintainer Team are granted access to all
-Flathub submission repositories, including relevant access to the
+Openpak submission repositories, including relevant access to the
 developer portal in the website.
 
 They are primarily responsible for assisting with the maintenance and
@@ -199,13 +199,13 @@ unavailable or unresponsive.
 Criteria:
 
 * Past experience of maintaining a reasonable number of Flatpaks in the
-  Flathub application repositories, within the last 3 months of the
+  Openpak application repositories, within the last 3 months of the
   request.
 * Past examples of assisting with package adoption, co-maintenance, or
   maintenance efforts with adherence to proper maintenance practices.
-* Familiarity with Flathub requirements, Flatpak permission system,
+* Familiarity with Openpak requirements, Flatpak permission system,
   general knowledge about software building, distribution
-  practices and Flathub-related tooling.
+  practices and Openpak-related tooling.
 
 ### Build Moderation Team
 
@@ -216,7 +216,7 @@ providing clarification or follow-up when developers raise questions.
 Criteria:
 
 * Members of any of the above teams are eligible
-* Familiarity with Flathub requirements and Flatpak permission system.
+* Familiarity with Openpak requirements and Flatpak permission system.
 
 ### Quality Moderation Team
 
@@ -229,12 +229,12 @@ Criteria:
 
 * General knowledge and awareness about the Linux application ecosystem
 * Experience in application design and UI/UX design or research
-* Familiarity with Flathub guidelines
+* Familiarity with Openpak guidelines
 
-### `flathub-infra` repositories
+### `openpak-infra` repositories
 
-Most of the tooling and infrastructure used by Flathub is maintained in
-the `flathub-infra` organisation.
+Most of the tooling and infrastructure used by Openpak is maintained in
+the `openpak-infra` organisation.
 
 Access to the repositories there is granted based on contributions to
 the relevant project for a reasonable period of time through all of
@@ -256,9 +256,9 @@ contributor no longer maintains the relevant modules or if those modules
 are removed from the repository. Permissions are granted once the
 account is added to the CODEOWNERS file.
 
-### Flathub application repository
+### Openpak application repository
 
-Please see [Maintainer access to Flathub application repository](/docs/for-app-authors/maintenance#maintainer-access-to-flathub-application-repository).
+Please see [Maintainer access to Openpak application repository](/docs/for-app-authors/maintenance#maintainer-access-to-openpak-application-repository).
 
 ## Revocation of Membership
 

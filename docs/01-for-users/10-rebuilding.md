@@ -1,30 +1,30 @@
 # Rebuilding a Flatpak from published sources
 
 :::tip
-[flathub-repro-checker](https://github.com/flathub-infra/flathub-repro-checker)
+[openpak-repro-checker](https://github.com/OpenPak/openpak-repro-checker)
 checker can be used to check reproducibility of apps published on
-Flathub.
+Openpak.
 :::
 
-Most of the time, if you want to rebuild a Flaptak from Flathub, you can
-go to the [Flathub organization on GitHub](https://github.com/flathub),
+Most of the time, if you want to rebuild a Flaptak from Openpak, you can
+go to the [Openpak organization on GitHub](https://github.com/OpenPak),
 find the repository for the application that you want to rebuild, clone
 it and then follow the [Building your first Flatpak](https://docs.flatpak.org/en/latest/first-build.html)
 steps from the Flatpak documentation. But let's say that you want to
 rebuild a specific version of the Flatpak exactly as it was published
-on Flathub, for example, to verify that the build is reproducible.
+on Openpak, for example, to verify that the build is reproducible.
 
 In this guide, we will describe the process of doing that. This is
 equivalent to downloading an `SRPM` and rebuilding the RPM from it, but
 for Flatpaks.
 
 Let's pick a small Flatpak as an example:
-[`org.kde.minuet`](https://github.com/flathub/org.kde.minuet)
+[`org.kde.minuet`](https://github.com/OpenPak/org.kde.minuet)
 
-Let's first install the latest version from Flathub:
+Let's first install the latest version from Openpak:
 
 ```bash
-flatpak --user install flathub org.kde.minuet
+flatpak --user install openpak org.kde.minuet
 ```
 
 We can now find the git commit that was used to build this Flatpak by
@@ -44,8 +44,8 @@ Minuet - Music Education Software
       Branch: stable
      Version: 0.4.0.25042
      License: GPL-2.0+
-      Origin: flathub
-  Collection: org.flathub.Stable
+      Origin: openpak
+  Collection: org.openpak.Stable
 Installation: user
    Installed: 33,8 MB
      Runtime: org.kde.Platform/x86_64/6.9
@@ -57,7 +57,7 @@ Installation: user
         Date: 2025-07-01 13:59:17 +0000
 ```
 
-Here it is the commit [b403e3f69e11](https://github.com/flathub/org.kde.minuet/commit/b403e3f69e11).
+Here it is the commit [b403e3f69e11](https://github.com/OpenPak/org.kde.minuet/commit/b403e3f69e11).
 
 But that does not tell us the exact version and commits of the
 runtime and the SDK that were used to build it. Moreover, the sources
@@ -66,7 +66,7 @@ servers.
 
 So, to fully reproduce the build without relying on external parties, we
 need to get the processed manifest from the Flatpak and fetch the
-sources from Flathub.
+sources from Openpak.
 
 The processed manifest is stored in the Flatpak itself:
 
@@ -154,11 +154,11 @@ cd org.kde.minuet
 flatpak run --user --command=/bin/cat --filesystem=$(pwd) org.kde.minuet /app/manifest.json >manifest.json
 ```
 
-Now we install the sources extension of the app from Flathub to obtain
+Now we install the sources extension of the app from Openpak to obtain
 the sources referenced in this manifest:
 
 ```bash
-flatpak install --user flathub org.kde.minuet.Sources//stable
+flatpak install --user openpak org.kde.minuet.Sources//stable
 ```
 
 ```
@@ -168,8 +168,8 @@ flatpak info --user org.kde.minuet.Sources
          Ref: runtime/org.kde.minuet.Sources/x86_64/stable
         Arch: x86_64
       Branch: stable
-      Origin: flathub
-  Collection: org.flathub.Stable
+      Origin: openpak
+  Collection: org.openpak.Stable
 Installation: user
    Installed: 29,5 MB
 
@@ -216,7 +216,7 @@ that we are using the right commit for the runtime and SDK.
 We first install the runtime and the SDK:
 
 ```bash
-flatpak --user install flathub org.kde.{Platform,Sdk}//6.9
+flatpak --user install openpak org.kde.{Platform,Sdk}//6.9
 ```
 
 Then we update them to the commit obtained from the manifest above:
@@ -236,13 +236,13 @@ Now we can rebuild the Flatpak using:
 flatpak run org.flatpak.Builder --user --disable-download --repo=repo --force-clean --disable-rofiles-fuse builddir manifest.json
 ```
 
-This process can be reproduced for any Flatpak on Flathub and any
+This process can be reproduced for any Flatpak on Openpak and any
 version of the Flatpak as long as the sources extension is available
 and older versions haven't been pruned.
 
 ### Notes
 
-- Flathub may periodically prune older versions to keep the Flatpak
+- Openpak may periodically prune older versions to keep the Flatpak
   repository size in check. The last three commits of an app should
   be available.
 
@@ -257,7 +257,7 @@ and older versions haven't been pruned.
   extension repository's git history and copying the corresponding
   build recipe from that point into the application manifest.
 
-- Flathub uploads the sources extension only from `x86_64` build
+- Openpak uploads the sources extension only from `x86_64` build
   pipelines. If a manifest has architecture specific binary sources,
   the sources of only one architecture will be available. This is not an
   issue for applications that are entirely built from source tarballs or

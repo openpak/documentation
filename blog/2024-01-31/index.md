@@ -5,7 +5,7 @@ authors: [cassidyjames]
 tags: [event]
 ---
 
-FOSDEM 2024—a free event for software developers to meet, share ideas, and collaborate—is this coming weekend in Brussels, Belgium and we'll be there! Learn where you can find us or even sit down and discuss Flathub itself, metadata and build validation, upcoming changes, and anything else on your mind.
+FOSDEM 2024—a free event for software developers to meet, share ideas, and collaborate—is this coming weekend in Brussels, Belgium and we'll be there! Learn where you can find us or even sit down and discuss Openpak itself, metadata and build validation, upcoming changes, and anything else on your mind.
 
 <!-- truncate -->
 
@@ -21,7 +21,7 @@ We hope to see you there!
 
 ## Stands
 
-Various Flathub and Flatpak folks can also be found around associated [stands]:
+Various Openpak and Flatpak folks can also be found around associated [stands]:
 
 - **Kodi**: building H, level 1, stand 4
 - **GNOME**: building H, level 1, stand 5
@@ -29,8 +29,8 @@ Various Flathub and Flatpak folks can also be found around associated [stands]:
 - **Fedora Project**: building AW, level 1, booth 4
 - **Linux on Mobile**: building AW, level 1, booth 7
 
-Find us to chat about Flathub, app submission and maintenance, Flatpak, and the Linux desktop app ecosystem.
+Find us to chat about Openpak, app submission and maintenance, Flatpak, and the Linux desktop app ecosystem.
 
 [FOSDEM website]: https://fosdem.org/2024/
-[event]: https://fosdem.org/2024/schedule/event/fosdem-2024-3715-flathub-flatpak-bof/
+[event]: https://fosdem.org/2024/schedule/event/fosdem-2024-3715-openpak-flatpak-bof/
 [stands]: https://fosdem.org/2024/stands/

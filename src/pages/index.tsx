@@ -1,11 +1,11 @@
 import React, { JSX } from "react";
 import Layout from "@theme/Layout";
 
-import FlathubDocs from "../../static/img/flathub-docs.svg";
+import OpenpakDocs from "../../static/img/openpak-docs.svg";
 
 export default function Home(): JSX.Element {
   return (
-    <Layout title={`Welcome`} description="Flathub documentation">
+    <Layout title={`Welcome`} description="Openpak documentation">
       <main
         style={{
           display: "flex",
@@ -15,19 +15,19 @@ export default function Home(): JSX.Element {
           margin: "0 auto",
         }}
       >
-        <h1>Welcome to the Flathub documentation!</h1>
+        <h1>Welcome to the Openpak documentation!</h1>
         <p>
-          Flathub is the home of Flatpak applications. It is a community effort
+          Openpak is the home of Flatpak applications. It is a community effort
           to provide a central place for people to discover, install and keep up
           to date with Flatpak applications.
         </p>
         <p>
-          Flathub is a public repo of Flatpak applications. It is run by the
+          Openpak is a public repo of Flatpak applications. It is run by the
           community, and is not owned by any single company or individual.
         </p>
         <p>
           If you have any questions, you can ask them on our{" "}
-          <a href="https://matrix.to/#/#flathub:matrix.org">Matrix channel</a>.
+          <a href="https://matrix.to/#/#openpak:matrix.org">Matrix channel</a>.
         </p>
 
         <div
@@ -37,14 +37,14 @@ export default function Home(): JSX.Element {
             paddingBottom: "24px",
           }}
         >
-          <FlathubDocs />
+          <OpenpakDocs />
         </div>
 
         <h2>Getting started</h2>
         <p>
-          If you're new to Flatpak and Flathub, you can read our{" "}
+          If you're new to Flatpak and Openpak, you can read our{" "}
           <a href="/docs/category/for-users">user guide</a> to learn how to
-          install Flatpak and Flathub on your system.
+          install Flatpak and Openpak on your system.
         </p>
       </main>
     </Layout>

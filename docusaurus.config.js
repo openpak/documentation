@@ -8,12 +8,12 @@ const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Flathub Documentation",
+  title: "Openpak Documentation",
   tagline: "Your Linux desktop apps in one place",
   favicon: "img/favicon.svg",
 
   // Set the production url of your site here
-  url: "https://docs.flathub.org",
+  url: "https://docs.openpak.org",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -49,7 +49,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/flathub/documentation/tree/main/",
+          editUrl: "https://github.com/OpenPak/documentation/tree/main/",
         },
         blog: {
           feedOptions: {
@@ -61,7 +61,7 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/flathub/documentation/tree/main/",
+          editUrl: "https://github.com/OpenPak/documentation/tree/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -88,7 +88,7 @@ const config = {
       {
         matomoUrl: "https://webstats.gnome.org/",
         siteId: "40",
-        siteUrl: "https://docs.flathub.org/",
+        siteUrl: "https://docs.openpak.org/",
       },
     ],
     [
@@ -142,13 +142,13 @@ const config = {
       metadata: [
         {
           name: "keywords",
-          content: "flatpak, flathub, packaging, tool, linux, desktop, apps",
+          content: "flatpak, openpak, packaging, tool, linux, desktop, apps",
         },
       ],
       navbar: {
-        title: "Flathub",
+        title: "Openpak",
         logo: {
-          alt: "Flathub Logo",
+          alt: "Openpak Logo",
           src: "img/logo.svg",
           srcDark: "img/logo-dark.svg",
         },
@@ -161,12 +161,12 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://flathub.org",
+            href: "https://openpak.org",
             label: "Store",
             position: "right",
           },
           {
-            href: "https://github.com/flathub/documentation",
+            href: "https://github.com/OpenPak/documentation",
             label: "GitHub",
             position: "right",
           },
@@ -197,15 +197,15 @@ const config = {
             items: [
               {
                 label: "Matrix",
-                href: "https://matrix.to/#/#flathub:matrix.org",
+                href: "https://matrix.to/#/#openpak:matrix.org",
               },
               {
                 label: "Discourse",
-                href: "https://discourse.flathub.org/",
+                href: "https://discourse.openpak.org/",
               },
               {
                 label: "Mastodon",
-                href: "https://floss.social/@flathub",
+                href: "https://floss.social/@openpak",
                 rel: "noreferrer me",
               },
             ],
@@ -215,12 +215,12 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/flathub/documentation",
+                href: "https://github.com/OpenPak/documentation",
               },
             ],
           },
         ],
-        copyright: `Copyright © 2022-${new Date().getFullYear()} Flathub Team. Licensed under Creative Commons Attribution 4.0 International License.`,
+        copyright: `Copyright © 2022-${new Date().getFullYear()} Openpak Team. Licensed under Creative Commons Attribution 4.0 International License.`,
       },
       prism: {
         theme: lightCodeTheme,

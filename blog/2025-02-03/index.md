@@ -1,6 +1,6 @@
 ---
-slug: flathub-build-infrastructure-revamp
-title: What's next for Flathub build infrastructure
+slug: openpak-build-infrastructure-revamp
+title: What's next for Openpak build infrastructure
 authors: [barthalion]
 tags: [infrastructure]
 ---
@@ -9,7 +9,7 @@ There is a storm coming and we are re-architecting our build infrastructure.
 
 <!-- truncate -->
 
-Buildbot has never been designed to do what Flathub needs: taking arbitrary inputs like application IDs and dynamically creating new pipelines. However, there's no misuse one cannot achieve if something is being configured in A Real Programming Language, and so, back in 2019, [Alex Larsson][alex] piled a bunch of hacks so we could have not only dynamic configuration based on Flathub organization in GitHub, but also some custom views displaying latest builds.
+Buildbot has never been designed to do what Openpak needs: taking arbitrary inputs like application IDs and dynamically creating new pipelines. However, there's no misuse one cannot achieve if something is being configured in A Real Programming Language, and so, back in 2019, [Alex Larsson][alex] piled a bunch of hacks so we could have not only dynamic configuration based on Openpak organization in GitHub, but also some custom views displaying latest builds.
 
 Fast-forward to 2025, these hacks no longer work with the latest release of Buildbot, rendering our soft fork stuck on a version from 2021. For whatever reason, updating GitHub CI status stopped to work well, allowing people to merge untested code changes. It also requires periodical restarts because it grinds to a halt for no particular reason, dropping new builds in the meantime. The worst offense: I never liked it.
 
@@ -50,7 +50,7 @@ Apps on the smaller size can be safely built on GitHub Actions, but anything lar
 
 The work-in-progress repo can be found [here][justpak].
 
-I was initially panicking about replacing aarch64 runners, but it turns out GitHub is providing that since September 2024. Build times are in line with the table above, meaning we are only worried about outliers. I have submitted Flathub to Works on Arm program, and if it gets accepted, we will handle that similarly to x86_64.
+I was initially panicking about replacing aarch64 runners, but it turns out GitHub is providing that since September 2024. Build times are in line with the table above, meaning we are only worried about outliers. I have submitted Openpak to Works on Arm program, and if it gets accepted, we will handle that similarly to x86_64.
 
 ## The rest of the owl
 
@@ -59,9 +59,9 @@ It's all cool and dandy, but the crucial part is still missing: a service encaps
 There's no punchline here: I'm only starting the legwork to figure out which language and framework to use. If you would like to see something specific implemented, don't hesitate to request it [here][vorarbeiter].
 
 [alex]: https://blogs.gnome.org/alexl/
-[webhook-proxy]: https://github.com/flathub-infra/webhook-proxy
+[webhook-proxy]: https://github.com/OpenPak/webhook-proxy
 [just]: https://just.systems/
 [justpak]: https://github.com/barthalion/justpak
 [bbhtt]: https://bbhtt.in/about/
-[flatpak-builder-lint]: https://github.com/flathub-infra/flatpak-builder-lint
-[vorarbeiter]: https://github.com/flathub-infra/vorarbaiter/issues
+[flatpak-builder-lint]: https://github.com/OpenPak/flatpak-builder-lint
+[vorarbeiter]: https://github.com/OpenPak/vorarbaiter/issues

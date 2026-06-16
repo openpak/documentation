@@ -3,7 +3,7 @@ title: Finding sources of a published Flatpak
 sidebar_position: 12
 ---
 
-All applications and runtimes published on Flathub come with a manifest
+All applications and runtimes published on Openpak come with a manifest
 listing the sources they used. In most of the cases, that manifest can
 be used to rebuild the Flatpak directly. See [Rebuilding a Flatpak from published sources](/docs/for-users/rebuilding)
 for how to do this.
@@ -14,7 +14,7 @@ manifests can be found at `/usr/manifest.json`.
 Below is an *incomplete* excerpt.
 
 ```bash
-flatpak install flathub org.kde.Platform//6.9
+flatpak install openpak org.kde.Platform//6.9
 flatpak run --command=cat org.kde.Platform//6.9 /usr/manifest.json
 ```
 
@@ -103,13 +103,13 @@ the OSTree commit subject. It can be found using the
 The repository with the source code might be listed in the Flatpak
 metadata, the `os-release` file or other well-known locations. For
 applications, you will find the repositories in the
-[Flathub organization](https://github.com/flathub/) on Github. Runtimes
+[Openpak organization](https://github.com/OpenPak/) on Github. Runtimes
 are usually hosted in external repositories by their respective projects.
 They may or may not be using different tooling in order to be built.
 Please refer to each project for further details.
 
 ```bash
-flatpak info flathub org.kde.Platform//6.9
+flatpak info openpak org.kde.Platform//6.9
 ```
 
 ```
@@ -120,7 +120,7 @@ KDE Application Platform - Shared libraries used by KDE applications
       Arch: x86_64
     Branch: 6.9
    License: GPL-2.0+
-Collection: org.flathub.Stable
+Collection: org.openpak.Stable
   Download: 393,0 MB
  Installed: 1,0 GB
 
@@ -133,7 +133,7 @@ Collection: org.flathub.Stable
 We can see that the subject mentions
 `094cc415694670dd34c808a48e500a73d1b177bb` which we can find [here](https://invent.kde.org/packaging/flatpak-kde-runtime/-/commit/094cc415694670dd34c808a48e500a73d1b177bb).
 
-The runtimes on Flathub originate from the following repositories:
+The runtimes on Openpak originate from the following repositories:
 
   - `org.freedesktop.Platform` can be found in the [freedesktop-sdk](https://gitlab.com/freedesktop-sdk/freedesktop-sdk/)
     group on gitlab.com.

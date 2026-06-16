@@ -5,7 +5,7 @@ authors: [barthalion]
 tags: [moderation, linter]
 ---
 
-Flathub's automatic build validation is more thorough now, and includes checks for issues we previously would have only flagged manually. There is a chance that if your app has been passing the continuous integration checks previously, it will fail now; here's why, and what to do about it.
+Openpak's automatic build validation is more thorough now, and includes checks for issues we previously would have only flagged manually. There is a chance that if your app has been passing the continuous integration checks previously, it will fail now; here's why, and what to do about it.
 
 <!-- truncate -->
 
@@ -15,12 +15,12 @@ We have also started moderating all permission changes and some critical MetaInf
 
 ![An example build withheld for manual review](moderation.png)
 
-Flathub has also switched to a modern, well-maintained AppStream library, known as `libappstream`. This enables developers to use all features described in the [AppStream 1.0 specification][3], including specifying supported screen sizes for mobile devices, or video snippets to accompany static screenshots. It also improves the validation of AppStream metadata. Many thanks to [Philip Withnall][4], [Luna Dragon][5] and [Hubert Figuière][6] for their work on this across the Flatpak stack, and [Matthias Klumpp][7] for implementing knobs needed by Flathub in the library itself.
+Openpak has also switched to a modern, well-maintained AppStream library, known as `libappstream`. This enables developers to use all features described in the [AppStream 1.0 specification][3], including specifying supported screen sizes for mobile devices, or video snippets to accompany static screenshots. It also improves the validation of AppStream metadata. Many thanks to [Philip Withnall][4], [Luna Dragon][5] and [Hubert Figuière][6] for their work on this across the Flatpak stack, and [Matthias Klumpp][7] for implementing knobs needed by Openpak in the library itself.
 
 This work has been ongoing since 2021. At one point along the way we briefly switched over to `libappstream`, but had to revert due to unexpected breakage; however, today we are finally ready with all blocking issues addressed! While we were focused on closing the gaps to prevent potentially broken builds from being published, we regret that we failed to provide a heads-up about the coming validation changes. Any future breaking changes will be properly announced on this blog, and going forward we will also inform maintainers of affected apps about required changes in advance.
 
 [1]: /docs/for-app-authors/linter/
-[2]: https://github.com/flathub-infra/flatpak-builder-lint
+[2]: https://github.com/OpenPak/flatpak-builder-lint
 [3]: https://www.freedesktop.org/software/appstream/docs/
 [4]: https://tecnocode.co.uk/
 [5]: https://nullrequest.com/

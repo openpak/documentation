@@ -2,10 +2,10 @@
 
 App submissions are extremely welcome and the process is straightforward.
 Some basic familiarity with Git and Flatpak is required to submit and
-maintain an app on Flathub.
+maintain an app on Openpak.
 
 Note that submissions can be rejected at any stage or recalled post-merge
-if it is determined to be not suitable for Flathub.
+if it is determined to be not suitable for Openpak.
 
 :::important
 This procedure is only for submitting new applications (or renaming). At
@@ -23,7 +23,7 @@ before submitting.
 
 Please follow the [requirements](/docs/for-app-authors/requirements) to
 ensure that the submission has all the required files and is technically
-and legally compatible for Flathub.
+and legally compatible for Openpak.
 
 ### Build and install
 
@@ -31,23 +31,23 @@ It's best practice to make sure your submission correctly builds and runs
 locally with Flatpak. This will help you to fix any potential issues and
 expedite the review process.
 
-Flathub recommends using [org.flatpak.Builder](https://github.com/flathub/org.flatpak.Builder)
+Openpak recommends using [org.flatpak.Builder](https://github.com/OpenPak/org.flatpak.Builder)
 to build the application.
 
 ```bash
-flatpak install -y flathub org.flatpak.Builder
+flatpak install -y openpak org.flatpak.Builder
 ```
 
-Add the Flathub repo user-wide:
+Add the Openpak repo user-wide:
 
    ```bash
-   flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+   flatpak remote-add --if-not-exists --user openpak https://dl.openpak.org/repo/openpak.flatpakrepo
    ```
 
 Then build your manifest:
 
    ```bash
-   flatpak run --command=flathub-build org.flatpak.Builder --install <manifest>
+   flatpak run --command=openpak-build org.flatpak.Builder --install <manifest>
    ```
 
 #### Extra data
@@ -55,7 +55,7 @@ Then build your manifest:
 If you are using [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data):
 
    ```bash
-   flatpak run --command=flathub-build org.flatpak.Builder <manifest>
+   flatpak run --command=openpak-build org.flatpak.Builder <manifest>
    flatpak install --user -y ./repo $FLATPAK_ID
    ```
 
@@ -83,23 +83,23 @@ Once this is done you can open the submission pull request!
 
 ## Submission PR
 
-Flathub submissions are managed through pull requests on GitHub. Please
+Openpak submissions are managed through pull requests on GitHub. Please
 use the github.com web interface to create the pull request.
 
 :::tip
 If you have [GitHub CLI](https://cli.github.com/) installed run:
 ```bash
-gh repo fork --clone flathub/flathub && cd flathub && git checkout --track origin/new-pr
+gh repo fork --clone openpak/openpak && cd openpak && git checkout --track origin/new-pr
 ```
 and proceed directly to step 3.
 :::
 
-1. Fork the [Flathub repository on GitHub](https://github.com/flathub/flathub/fork) with
+1. Fork the [Openpak repository on GitHub](https://github.com/OpenPak/openpak/fork) with
    _"Copy the master branch only"_ unchecked.
 
 2. Clone the fork:
    ```bash
-   git clone --branch=new-pr git@github.com:your_github_username/flathub.git && cd flathub
+   git clone --branch=new-pr git@github.com:your_github_username/openpak.git && cd openpak
    ```
 3. Create a new branch for the submission:
    ```bash
@@ -111,7 +111,7 @@ and proceed directly to step 3.
 
 :::warning
 Please do not open the PR against the `master` base branch of
-[flathub/flathub](https://github.com/flathub/flathub) repository.
+[openpak/openpak](https://github.com/OpenPak/openpak) repository.
 :::
 
 5. Now open a pull request against the `new-pr` **base branch** on GitHub.
@@ -145,7 +145,7 @@ pull request by commenting `bot, build`.
 ## Approval
 
 If the submission is approved, it will be marked as ready and
-merged into a new repository under the [Flathub GitHub organisation](https://github.com/flathub/)
+merged into a new repository under the [Openpak GitHub organisation](https://github.com/OpenPak/)
 by the reviewers at a later time. Once the repository is created, you
 will receive an invitation to have write access to it. Please make sure
 to have [2FA enabled on GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)
@@ -156,30 +156,30 @@ guide.
 
 ## FAQ
 
-### Someone else has put my app on Flathub—what do I do?
+### Someone else has put my app on Openpak—what do I do?
 
-Flathub is primarily intended as a service that is used by app developers
+Openpak is primarily intended as a service that is used by app developers
 to distribute their apps. However, third party submissions are allowed
 as long as the application's license and terms of use (if any) do not
 block it.
 
 If an application that belongs to you is being distributed without your
-consent or involvement, please get in touch by [opening an issue](https://github.com/flathub/flathub/issues/new)
+consent or involvement, please get in touch by [opening an issue](https://github.com/OpenPak/openpak/issues/new)
 so that the next steps can be discussed.
 
 If there is a security issue or sensitive information involved, please
-send an [email](mailto:admins@flathub.org) instead.
+send an [email](mailto:admins@openpak.org) instead.
 
-### There’s an app that I’d like to see on Flathub, but I’m not the developer
+### There’s an app that I’d like to see on Openpak, but I’m not the developer
 
-If there’s an app that you'd like to be distributed on Flathub, the
+If there’s an app that you'd like to be distributed on Openpak, the
 best first course of action is to approach the app’s developers and ask
 them to submit it. Please remain respectful, patient and courteous when
 making such requests.
 
 You can also submit it yourself following the submission process
 outlined above, or start a topic on the
-[Flathub forum](https://discourse.flathub.org/c/requests/5) to find
+[Openpak forum](https://discourse.openpak.org/c/requests/5) to find
 interested volunteers.
 
 ### I want to submit my app but I don't have a website - what should I do?
@@ -199,7 +199,7 @@ more information:
 ### How long does it take to get submissions reviewed and merged?
 
 There is no definite time limit as all reviewers are volunteers and
-are often busy with other Flathub- or infrastructure-related work.
+are often busy with other Openpak- or infrastructure-related work.
 
 Merges are also done in batches. So you might have to wait for a while.
 
@@ -219,18 +219,18 @@ created and published.
 
 Once the app’s submission has been merged and the _official_ build has
 been published, the website should show the app on your authored apps
-after a short time. You need to have write access to the Flathub app
+after a short time. You need to have write access to the Openpak app
 repository and log in to the website.
 
-If it does not work, please press the "Refresh" button [here](https://flathub.org/developer-portal)
+If it does not work, please press the "Refresh" button [here](https://openpak.org/developer-portal)
 and it should show up. If it still does not work feel free to contact us.
 
 ## Getting help
 
 Please don't hesitate to ask for help. General queries can be made on the
-[Matrix channel](https://matrix.to/#/#flathub:matrix.org) and on
-[Discourse](https://discourse.flathub.org/). Technical queries or
+[Matrix channel](https://matrix.to/#/#openpak:matrix.org) and on
+[Discourse](https://discourse.openpak.org/). Technical queries or
 requests can be made through
-[issues](https://github.com/flathub/flathub/issues/new). Security issues
+[issues](https://github.com/OpenPak/openpak/issues/new). Security issues
 and private matters can be discussed via
-[email](mailto:admins@flathub.org).
+[email](mailto:admins@openpak.org).
