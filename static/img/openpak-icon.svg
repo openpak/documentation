@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="Openpak">
+  <rect width="160" height="160" rx="34" fill="#14181F"/>
+  <path d="M44 88 L44 132 L116 132 L116 88 M44 88 L31 73 M116 88 L129 73" fill="none" stroke="#FB6A3C" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="62" y="42" width="36" height="36" rx="9" fill="#FFB020"/>
+  <path d="M110 31 L112.5 38 L120 40 L112.5 42 L110 49 L107.5 42 L100 40 L107.5 38 Z" fill="#FFF1E6"/>
+</svg>

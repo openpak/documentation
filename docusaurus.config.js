@@ -10,7 +10,7 @@ const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 const config = {
   title: "Openpak Documentation",
   tagline: "Your Linux desktop apps in one place",
-  favicon: "img/favicon.svg",
+  favicon: "img/openpak-icon-512.png",
 
   // Set the production url of your site here
   url: "https://docs.openpak.org",
@@ -146,11 +146,10 @@ const config = {
         },
       ],
       navbar: {
-        title: "Openpak",
         logo: {
-          alt: "Openpak Logo",
-          src: "img/logo.svg",
-          srcDark: "img/logo-dark.svg",
+          alt: "Openpak",
+          src: "img/openpak-wordmark.svg",
+          srcDark: "img/openpak-wordmark-dark.svg",
         },
         items: [
           {
