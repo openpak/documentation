@@ -58,8 +58,8 @@ Given [the challenging circumstances][revamp], this is more than good enough,
 though! If you encounter any issues with the new workflow, don't hesitate to
 [open an issue][issue] in the project's GitHub repository.
 
-[vorarbeiter]: https://github.com/OpenPak/vorarbeiter
+[vorarbeiter]: https://github.com/openpak/vorarbeiter
 [runson]: https://runs-on.com/
 [aws]: https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/
 [revamp]: https://docs.openpak.org/blog/openpak-build-infrastructure-revamp
-[issue]: https://github.com/OpenPak/vorarbeiter/issues
+[issue]: https://github.com/openpak/vorarbeiter/issues

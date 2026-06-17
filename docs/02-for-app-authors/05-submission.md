@@ -31,7 +31,7 @@ It's best practice to make sure your submission correctly builds and runs
 locally with Flatpak. This will help you to fix any potential issues and
 expedite the review process.
 
-Openpak recommends using [org.flatpak.Builder](https://github.com/OpenPak/org.flatpak.Builder)
+Openpak recommends using [org.flatpak.Builder](https://github.com/openpak/org.flatpak.Builder)
 to build the application.
 
 ```bash
@@ -94,7 +94,7 @@ gh repo fork --clone openpak/openpak && cd openpak && git checkout --track origi
 and proceed directly to step 3.
 :::
 
-1. Fork the [Openpak repository on GitHub](https://github.com/OpenPak/openpak/fork) with
+1. Fork the [Openpak repository on GitHub](https://github.com/openpak/openpak/fork) with
    _"Copy the master branch only"_ unchecked.
 
 2. Clone the fork:
@@ -111,7 +111,7 @@ and proceed directly to step 3.
 
 :::warning
 Please do not open the PR against the `master` base branch of
-[openpak/openpak](https://github.com/OpenPak/openpak) repository.
+[openpak/openpak](https://github.com/openpak/openpak) repository.
 :::
 
 5. Now open a pull request against the `new-pr` **base branch** on GitHub.
@@ -145,7 +145,7 @@ pull request by commenting `bot, build`.
 ## Approval
 
 If the submission is approved, it will be marked as ready and
-merged into a new repository under the [Openpak GitHub organisation](https://github.com/OpenPak/)
+merged into a new repository under the [Openpak GitHub organisation](https://github.com/openpak/)
 by the reviewers at a later time. Once the repository is created, you
 will receive an invitation to have write access to it. Please make sure
 to have [2FA enabled on GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)
@@ -164,7 +164,7 @@ as long as the application's license and terms of use (if any) do not
 block it.
 
 If an application that belongs to you is being distributed without your
-consent or involvement, please get in touch by [opening an issue](https://github.com/OpenPak/openpak/issues/new)
+consent or involvement, please get in touch by [opening an issue](https://github.com/openpak/openpak/issues/new)
 so that the next steps can be discussed.
 
 If there is a security issue or sensitive information involved, please
@@ -231,6 +231,6 @@ Please don't hesitate to ask for help. General queries can be made on the
 [Matrix channel](https://matrix.to/#/#openpak:matrix.org) and on
 [Discourse](https://discourse.openpak.org/). Technical queries or
 requests can be made through
-[issues](https://github.com/OpenPak/openpak/issues/new). Security issues
+[issues](https://github.com/openpak/openpak/issues/new). Security issues
 and private matters can be discussed via
 [email](mailto:admins@openpak.org).

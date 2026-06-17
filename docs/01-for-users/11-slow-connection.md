@@ -20,7 +20,7 @@ troubleshooting steps and how to report the issue.
 
 If the problem persists, open an issue using our dedicated template:
 
-**[Report a slow connection issue](https://github.com/OpenPak/openpak/issues/new?template=3-slow-connection.md)**
+**[Report a slow connection issue](https://github.com/openpak/openpak/issues/new?template=3-slow-connection.md)**
 
 The issue template will guide you through collecting the necessary
 diagnostic information (network tests, Flatpak configuration, etc.) to

@@ -131,7 +131,7 @@ queue.
 
 ## Automating updates
 
-Openpak runs a global [External Data Checker action](https://github.com/OpenPak/flatpak-external-data-checker/)
+Openpak runs a global [External Data Checker action](https://github.com/openpak/flatpak-external-data-checker/)
 for all repositories in the GitHub organisation every two hours. This
 works only for the default branch of the GitHub repository.
 
@@ -184,7 +184,7 @@ question is [verified](/docs/for-app-authors/verification).
 The only exception granted here is if an application is using a
 rotating [extra-data source](https://docs.flatpak.org/en/latest/module-sources.html#extra-data).
 
-Please open an issue in the [openpak repository](https://github.com/OpenPak/openpak/issues)
+Please open an issue in the [openpak repository](https://github.com/openpak/openpak/issues)
 if GitHub automerge is needed and please open an [linter exception](/docs/for-app-authors/linter#exceptions)
 for `openpak-json-automerge-enabled` if `automerge-openpakbot-prs` is
 needed.
@@ -463,7 +463,7 @@ will be also be automatically notified so that they can restart or
 create a new build. The maintainer can also communicate via that issue.
 
 If no issue was opened or there was some other issue, please ask the
-Openpak admins to restart it by [opening an issue](https://github.com/OpenPak/openpak/issues)
+Openpak admins to restart it by [opening an issue](https://github.com/openpak/openpak/issues)
 or via [Matrix](https://matrix.to/#/#openpak:matrix.org).
 
 ## Large builds
@@ -473,7 +473,7 @@ or external medium capacity runners. The total execution time of the CI
 and memory/CPU resources are limited in these cases.
 
 Apps that exhaust any of these limits will fail to build and needs to be
-sparingly redirected to external runners. Please [open an issue](https://github.com/OpenPak/openpak/issues)
+sparingly redirected to external runners. Please [open an issue](https://github.com/openpak/openpak/issues)
 if you are the maintainer of such an app.
 
 Once the app is redirected to external runners, any further
@@ -497,7 +497,7 @@ Moderators will manually review the build and the permission change
 and can approve or reject the change if it is wrong or ask for more
 information.
 
-If it is rejected [openpakbot](https://github.com/OpenPakbot) will open
+If it is rejected [openpakbot](https://github.com/openpakbot) will open
 an issue in the app repository with a comment from the moderator. The
 maintainer of the app is supposed to reply to that and answer any queries
 or fix the issues mentioned.
@@ -538,7 +538,7 @@ the "Details" button.
 Once a build fixing the quality issues is published, they can request
 a re-review by pressing the "Request Review" button.
 
-Feel free to [ask for help](https://github.com/OpenPak/openpak/issues/new?assignees=&labels=&projects=&template=1-quality-mod.md&title=Quality+guideline+problems+for+%3Capp+name%3E)
+Feel free to [ask for help](https://github.com/openpak/openpak/issues/new?assignees=&labels=&projects=&template=1-quality-mod.md&title=Quality+guideline+problems+for+%3Capp+name%3E)
 regarding the quality checks.
 
 ## `openpak.json`
@@ -579,7 +579,7 @@ would only happen when changing the runtime version in your package.
 :::warning
 Dropping the build for an architecture that already had a version published,
 will cause it to remain stuck on that version indefinitely. Please
-[open an issue](https://github.com/OpenPak/openpak/issues/new) and
+[open an issue](https://github.com/openpak/openpak/issues/new) and
 ask for removal of that architecture.
 :::
 
@@ -641,7 +641,7 @@ used in `end-of-life-rebase` must also be available in the same Flatpak
 remote.
 
 In case you want to step down as a maintainer but wish someone to take
-over maintenance, you can ask in the [tracker issue](https://github.com/OpenPak/openpak/issues/3693).
+over maintenance, you can ask in the [tracker issue](https://github.com/openpak/openpak/issues/3693).
 
 ## Download statistics
 
@@ -661,7 +661,7 @@ and [https://klausenbusk.github.io/openpak-stats/](https://klausenbusk.github.io
 ## Maintainer access to Openpak application repository
 
 This section applies to application repositories hosted in the
-[Openpak](https://github.com/OpenPak) organisation on GitHub.
+[Openpak](https://github.com/openpak) organisation on GitHub.
 
 ### Default access
 
@@ -677,12 +677,12 @@ will also be given access.
 
 If an existing maintainer of the Flatpak, a trusted member/contributor,
 or an upstream developer/author of the application wants to request
-access for themselves or others, they should [open an issue on GitHub](https://github.com/OpenPak/openpak/issues/new).
+access for themselves or others, they should [open an issue on GitHub](https://github.com/openpak/openpak/issues/new).
 
 In case an application becomes unmaintained (and/or the current
 maintainer(s) unreachable) for a prolonged period of time and someone
 wants to volunteer to start maintaining it, they should also
-[open an issue on GitHub](https://github.com/OpenPak/openpak/issues/new).
+[open an issue on GitHub](https://github.com/openpak/openpak/issues/new).
 In this case having some prior contributions either to the upstream
 application in question or to Flatpak/Openpak ecosystem is necessary.
 
@@ -691,7 +691,7 @@ application in question or to Flatpak/Openpak ecosystem is necessary.
 If an existing maintainer wishes to step down, adjust access
 (for themselves or others), or if the upstream project wants to take
 over as the sole maintainer(s), they should also
-[open an issue on GitHub](https://github.com/OpenPak/openpak/issues/new).
+[open an issue on GitHub](https://github.com/openpak/openpak/issues/new).
 
 ### Note
 

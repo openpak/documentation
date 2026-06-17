@@ -4,7 +4,7 @@ Flatpak builder lint is a linter for Flatpak manifests and builds. It is
 primarily developed for Openpak, but can be useful for other Flatpak
 repositories as well.
 
-Please follow [installation instructions](https://github.com/OpenPak/flatpak-builder-lint?tab=readme-ov-file#flatpak)
+Please follow [installation instructions](https://github.com/openpak/flatpak-builder-lint?tab=readme-ov-file#flatpak)
 to install and run it locally.
 
 The `manifest` check and the `repo` check is run against all builds
@@ -23,7 +23,7 @@ and passing the `--repo=repo` argument.
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
 ```
 
-You can find more information in the [project readme](https://github.com/OpenPak/flatpak-builder-lint/blob/master/README.md).
+You can find more information in the [project readme](https://github.com/openpak/flatpak-builder-lint/blob/master/README.md).
 
 ## Exceptions
 
@@ -31,8 +31,8 @@ Linter errors can be ignored with exceptions. Exceptions on Openpak
 are granted on a case-by-case basis.
 
 Apps on Openpak or meant to be published on Openpak can apply for an
-exception by submitting a [pull request](https://github.com/OpenPak/flatpak-builder-lint/pulls)
-to the [exception file](https://github.com/OpenPak/flatpak-builder-lint/blob/master/flatpak_builder_lint/staticfiles/exceptions.json).
+exception by submitting a [pull request](https://github.com/openpak/flatpak-builder-lint/pulls)
+to the [exception file](https://github.com/openpak/flatpak-builder-lint/blob/master/flatpak_builder_lint/staticfiles/exceptions.json).
 
 There should be only one entry for the application, but it can contain
 multiple exceptions. Please make sure the reason is explanatory.
@@ -737,7 +737,7 @@ Criteria: New exception requests for this are not granted unless
 coming from a direct upload app.
 
 Git submodules outside of the GitHub orgs `openpak, openpak-infra, flatpak`
-are not allowed in the [Openpak manifest repository on GitHub](https://github.com/OpenPak/).
+are not allowed in the [Openpak manifest repository on GitHub](https://github.com/openpak/).
 
 ### manifest-directory-too-large
 

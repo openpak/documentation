@@ -9,4 +9,4 @@ You can now find our new documentation at [docs.openpak.org](/) or well here, if
 
 <!-- truncate -->
 
-Please read through it and send us feedback if you find anything missing or unclear. You can also send us a [pull request](https://github.com/OpenPak/documentation) if you want to help us improve it.
+Please read through it and send us feedback if you find anything missing or unclear. You can also send us a [pull request](https://github.com/openpak/documentation) if you want to help us improve it.

@@ -59,9 +59,9 @@ It's all cool and dandy, but the crucial part is still missing: a service encaps
 There's no punchline here: I'm only starting the legwork to figure out which language and framework to use. If you would like to see something specific implemented, don't hesitate to request it [here][vorarbeiter].
 
 [alex]: https://blogs.gnome.org/alexl/
-[webhook-proxy]: https://github.com/OpenPak/webhook-proxy
+[webhook-proxy]: https://github.com/openpak/webhook-proxy
 [just]: https://just.systems/
 [justpak]: https://github.com/barthalion/justpak
 [bbhtt]: https://bbhtt.in/about/
-[flatpak-builder-lint]: https://github.com/OpenPak/flatpak-builder-lint
-[vorarbeiter]: https://github.com/OpenPak/vorarbaiter/issues
+[flatpak-builder-lint]: https://github.com/openpak/flatpak-builder-lint
+[vorarbeiter]: https://github.com/openpak/vorarbaiter/issues

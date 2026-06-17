@@ -49,7 +49,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/OpenPak/documentation/tree/main/",
+          editUrl: "https://github.com/openpak/documentation/tree/main/",
         },
         blog: {
           feedOptions: {
@@ -61,7 +61,7 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/OpenPak/documentation/tree/main/",
+          editUrl: "https://github.com/openpak/documentation/tree/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -165,7 +165,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://github.com/OpenPak/documentation",
+            href: "https://github.com/openpak/documentation",
             label: "GitHub",
             position: "right",
           },
@@ -214,7 +214,7 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/OpenPak/documentation",
+                href: "https://github.com/openpak/documentation",
               },
             ],
           },

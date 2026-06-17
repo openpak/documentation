@@ -1,7 +1,7 @@
 # Review
 
 Reviews happen via comments on GitHub PR's where we also have
-[labels](https://github.com/OpenPak/openpak/labels) to make note the
+[labels](https://github.com/openpak/openpak/labels) to make note the
 status of a PR which is useful when no actions have happened over a
 long period.
 

@@ -34,7 +34,7 @@ Developers, if you'd like to see your app featured on the home page, please ensu
 
 Six months ago we passed one million active users based on a simple if conservative estimate of updates to a common runtime version we had served. Using that same methodology, we now estimate we have over 4 million active users!
 
-As a reminder, this data is publicly available and anyone can check our work. In fact, I personally would love if we could work with a volunteer from the community to automate this statistic so we don't have to do manual collation each time. If you're interested, check out [this GitHub issue](https://github.com/OpenPak/website/issues/2945).
+As a reminder, this data is publicly available and anyone can check our work. In fact, I personally would love if we could work with a volunteer from the community to automate this statistic so we don't have to do manual collation each time. If you're interested, check out [this GitHub issue](https://github.com/openpak/website/issues/2945).
 
 ### Over 2 billion downloads
 

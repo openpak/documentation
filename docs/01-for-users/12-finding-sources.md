@@ -103,7 +103,7 @@ the OSTree commit subject. It can be found using the
 The repository with the source code might be listed in the Flatpak
 metadata, the `os-release` file or other well-known locations. For
 applications, you will find the repositories in the
-[Openpak organization](https://github.com/OpenPak/) on Github. Runtimes
+[Openpak organization](https://github.com/openpak/) on Github. Runtimes
 are usually hosted in external repositories by their respective projects.
 They may or may not be using different tooling in order to be built.
 Please refer to each project for further details.

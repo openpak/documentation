@@ -74,7 +74,7 @@ current maintainer first to determine whether they would like help.
 
 If an application is unmaintained, or if the existing maintainer has
 not responded to or reviewed your proposed changes after a reasonable
-period of time, you may open an [issue](https://github.com/OpenPak/openpak/issues)
+period of time, you may open an [issue](https://github.com/openpak/openpak/issues)
 requesting an admin to review. If the proposed changes are approved,
 you may be granted maintainer access to the application.
 
@@ -82,7 +82,7 @@ The same process can be followed to [create new branches](/docs/for-app-authors/
 of extensions or BaseApps which are often a requirement for an app to
 migrate to a newer runtime.
 
-You can consider picking up or submitting in the [shared-modules repo](https://github.com/OpenPak/shared-modules).
+You can consider picking up or submitting in the [shared-modules repo](https://github.com/openpak/shared-modules).
 
 ### Localisation
 
@@ -114,7 +114,7 @@ the [requirements](/docs/for-app-authors/requirements).
 
 If you have a design or UI/UX background, you can help developers by
 answering their [Quality Guideline](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
-[questions](https://github.com/OpenPak/openpak/issues?q=is%3Aissue%20state%3Aopen%20label%3Aquality-guidelines).
+[questions](https://github.com/openpak/openpak/issues?q=is%3Aissue%20state%3Aopen%20label%3Aquality-guidelines).
 
 These contributions often involve reviewing or creating application
 icons, providing certain design feedback, or helping improve
@@ -123,7 +123,7 @@ icons, providing certain design feedback, or helping improve
 ### Code contribution
 
 The entire set of tooling used to run Openpak is available as open
-source in the [openpak-infra organisation](https://github.com/OpenPak).
+source in the [openpak-infra organisation](https://github.com/openpak).
 
 You can contribute by opening a bug report, tackling an open issue or
 fixing a bug you encountered. Some contributions to these projects may
@@ -132,15 +132,15 @@ Openpak workflows and processes.
 
 A list of relevant components is provided below.
 
-* [Openpak website frontend](https://github.com/OpenPak/website/tree/main/frontend)
+* [Openpak website frontend](https://github.com/openpak/website/tree/main/frontend)
   (React, Typescript, NextJS)
-* [Openpak website backend](https://github.com/OpenPak/website/tree/main/backend)
+* [Openpak website backend](https://github.com/openpak/website/tree/main/backend)
   (Python, FastAPI)
-* [Openpak build dispatcher](https://github.com/OpenPak/vorarbeiter)
+* [Openpak build dispatcher](https://github.com/openpak/vorarbeiter)
   (Python, FastAPI)
-* [Openpak build linter](https://github.com/OpenPak/flatpak-builder-lint)
+* [Openpak build linter](https://github.com/openpak/flatpak-builder-lint)
   (Python)
-* [Flatpak external data checker](https://github.com/OpenPak/flatpak-external-data-checker)
+* [Flatpak external data checker](https://github.com/openpak/flatpak-external-data-checker)
   (Python)
 
 ### Other contributions
@@ -159,7 +159,7 @@ Some relevant projects are listed below.
 ## Team Membership Process
 
 New membership requests must be sponsored by an existing member who will
-open an issue in the [memberships repository](https://github.com/OpenPak/memberships)
+open an issue in the [memberships repository](https://github.com/openpak/memberships)
 linking relevant activity and/or contributions.
 
 Please note that all requests are evaluated on a case-by-case basis and

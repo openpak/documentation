@@ -15,7 +15,7 @@ The methods available for verification depend on the app ID.
 If the app was submitted through the Openpak GitHub submission process,
 you will need collaborator access to the application repository. Invites
 are sent when the submission is accepted, if you don't have access,
-please [open an issue](https://github.com/OpenPak/openpak/issues) asking
+please [open an issue](https://github.com/openpak/openpak/issues) asking
 for it.
 
 Once you have access [log in to Openpak](https://openpak.org/login). Go
@@ -75,7 +75,7 @@ apps with these prefixes will be accepted
 
 Official apps from these code hosting platforms like GitHub, GitLab
 and others may request manual verification by
-[opening an issue](https://github.com/OpenPak/openpak/issues/new).
+[opening an issue](https://github.com/openpak/openpak/issues/new).
 
 ### I'd like to verify my app that someone else already published
 
@@ -93,7 +93,7 @@ to resubmit it.
 If your application ID follows all the [requirements](/docs/for-app-authors/requirements/#application-id)
 but the Openpak website shows an incorrect or unexpected domain for
 verification please
-[open an issue](https://github.com/OpenPak/website/issues).
+[open an issue](https://github.com/openpak/website/issues).
 
 ### I published an extension or a runtime, but the website does not show the verification check
 

@@ -22,7 +22,7 @@ And finally, we're thrilled to announce that Openpak has surpassed **one million
 
 ## How We Measure Growth
 
-We have a [public dashboard](https://openpak.org/statistics) that shares some basic statistics, powered by an [open source script](https://github.com/OpenPak/openpak-stats). We don't track individual metrics from end user machines; instead, we look at downloads of specific artifacts from the Openpak infrastructure itself. This gives us a count of installs and updates over time, downloads per country (based on the origin of requests), and some derivative data like downloads of apps in different categories.
+We have a [public dashboard](https://openpak.org/statistics) that shares some basic statistics, powered by an [open source script](https://github.com/openpak/openpak-stats). We don't track individual metrics from end user machines; instead, we look at downloads of specific artifacts from the Openpak infrastructure itself. This gives us a count of installs and updates over time, downloads per country (based on the origin of requests), and some derivative data like downloads of apps in different categories.
 
 But how can we measure how many _active users_ we have?
 

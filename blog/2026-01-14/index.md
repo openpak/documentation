@@ -86,6 +86,6 @@ direct uploads at the moment.
 [runson]: https://runs-on.com/
 [aws]: https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/
 [oras]: https://oras.land/
-[frc]: https://github.com/OpenPak/openpak-repro-checker
+[frc]: https://github.com/openpak/openpak-repro-checker
 [webui]: https://builds.openpak.org/
 [reprowebui]: https://builds.openpak.org/reproducible

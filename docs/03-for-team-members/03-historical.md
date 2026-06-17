@@ -1,6 +1,6 @@
 # Historical documents
 
-These were migrated from the [wiki](https://github.com/OpenPak/openpak/wiki).
+These were migrated from the [wiki](https://github.com/openpak/openpak/wiki).
 
 ## Launch TODO
 

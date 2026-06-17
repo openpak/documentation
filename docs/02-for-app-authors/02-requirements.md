@@ -8,11 +8,11 @@ on Openpak are safe to use and integrate well in the desktop experience.
 :::tip
 Each application is evaluated on a case-by-case basis and if you are
 unsure whether it fits the guidelines, please feel free to ask via
-[GitHub issues](https://github.com/OpenPak/openpak/issues) or in the
+[GitHub issues](https://github.com/openpak/openpak/issues) or in the
 [Openpak Matrix room](https://matrix.to/#/#openpak:matrix.org).
 
 If you believe something is violating these policies, please
-[open an issue](https://github.com/OpenPak/openpak/issues).
+[open an issue](https://github.com/openpak/openpak/issues).
 :::
 
 Openpak aims to provide a curated collection of high-quality, sandboxed

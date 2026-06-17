@@ -1,13 +1,13 @@
 # Rebuilding a Flatpak from published sources
 
 :::tip
-[openpak-repro-checker](https://github.com/OpenPak/openpak-repro-checker)
+[openpak-repro-checker](https://github.com/openpak/openpak-repro-checker)
 checker can be used to check reproducibility of apps published on
 Openpak.
 :::
 
 Most of the time, if you want to rebuild a Flaptak from Openpak, you can
-go to the [Openpak organization on GitHub](https://github.com/OpenPak),
+go to the [Openpak organization on GitHub](https://github.com/openpak),
 find the repository for the application that you want to rebuild, clone
 it and then follow the [Building your first Flatpak](https://docs.flatpak.org/en/latest/first-build.html)
 steps from the Flatpak documentation. But let's say that you want to
@@ -19,7 +19,7 @@ equivalent to downloading an `SRPM` and rebuilding the RPM from it, but
 for Flatpaks.
 
 Let's pick a small Flatpak as an example:
-[`org.kde.minuet`](https://github.com/OpenPak/org.kde.minuet)
+[`org.kde.minuet`](https://github.com/openpak/org.kde.minuet)
 
 Let's first install the latest version from Openpak:
 
@@ -57,7 +57,7 @@ Installation: user
         Date: 2025-07-01 13:59:17 +0000
 ```
 
-Here it is the commit [b403e3f69e11](https://github.com/OpenPak/org.kde.minuet/commit/b403e3f69e11).
+Here it is the commit [b403e3f69e11](https://github.com/openpak/org.kde.minuet/commit/b403e3f69e11).
 
 But that does not tell us the exact version and commits of the
 runtime and the SDK that were used to build it. Moreover, the sources

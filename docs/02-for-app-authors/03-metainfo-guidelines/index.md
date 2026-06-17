@@ -755,7 +755,7 @@ order based on trending.
 
 Applications that are directly uploaded to Openpak through their own
 infrastructure and does not have a Github repo on the [Openpak
-organisation](https://github.com/OpenPak) must add the location to their
+organisation](https://github.com/openpak) must add the location to their
 flatpak manifest like so:
 
 ```xml

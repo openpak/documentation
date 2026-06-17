@@ -70,7 +70,7 @@ Every app is built against a [Flatpak runtime](https://docs.flatpak.org/en/lates
 
 Runtimes are automatically installed with apps that require them, and are updated separately by the user’s OS, app store, or CLI when needed. When a dependency in a runtime is updated, e.g. for a critical security update, it rolls out as an update to all users of apps that use that runtime.
 
-In some cases there are commonly-used libraries not provided directly by one of the available runtimes. Openpak provides [shared modules](https://docs.openpak.org/docs/for-app-authors/shared-modules) for these libraries to centralize the maintenance. If an app needs to bundle other dependencies, they must be defined in the manifest. We also provide [tooling to automatically suggest updates](https://github.com/OpenPak/flatpak-external-data-checker) to app dependencies.
+In some cases there are commonly-used libraries not provided directly by one of the available runtimes. Openpak provides [shared modules](https://docs.openpak.org/docs/for-app-authors/shared-modules) for these libraries to centralize the maintenance. If an app needs to bundle other dependencies, they must be defined in the manifest. We also provide [tooling to automatically suggest updates](https://github.com/openpak/flatpak-external-data-checker) to app dependencies.
 
 ## Submission & Human Review
 

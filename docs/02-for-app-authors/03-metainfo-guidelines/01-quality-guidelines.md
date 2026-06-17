@@ -1,7 +1,7 @@
 # Quality guidelines
 
 :::tip
-Please [open an issue](https://github.com/OpenPak/openpak/issues/new?assignees=&labels=&projects=&template=1-quality-mod.md&title=Quality+guideline+problems+for+%3Capp+name%3E) using the Quality Guidelines template for support
+Please [open an issue](https://github.com/openpak/openpak/issues/new?assignees=&labels=&projects=&template=1-quality-mod.md&title=Quality+guideline+problems+for+%3Capp+name%3E) using the Quality Guidelines template for support
 regarding these guidelines.
 :::
 
