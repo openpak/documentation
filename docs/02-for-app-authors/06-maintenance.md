@@ -71,8 +71,7 @@ Current and prospective maintainers on Openpak are expected to:
   be no expectation of prioritized support or work.
 
 - Stay engaged with the Openpak community through available channels,
-  including the [Openpak Discourse](https://discourse.openpak.org/), the
-  [Openpak blog](https://docs.openpak.org/blog), and the
+  including the [Openpak Discourse](https://discourse.openpak.org/) and the
   [Openpak Matrix channel](https://matrix.to/#/#openpak:matrix.org).
 
 ## The repository

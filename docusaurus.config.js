@@ -51,18 +51,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/openpak/documentation/tree/main/",
         },
-        blog: {
-          feedOptions: {
-            type: "all",
-            xslt: true,
-          },
-          onInlineAuthors: "throw",
-          onUntruncatedBlogPosts: "throw",
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/openpak/documentation/tree/main/",
-        },
+        // Blog disabled for now.
+        blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -158,7 +148,6 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://openpak.org",
             label: "Store",
