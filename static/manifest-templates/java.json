@@ -1,0 +1,48 @@
+{
+    "id": "com.example.App",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "25.08",
+    "sdk": "org.freedesktop.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.openjdk"
+    ],
+    "command": "example-app",
+    "build-options": {
+        "env": {
+            "JAVA_HOME": "/usr/lib/sdk/openjdk/jvm/openjdk",
+            "PATH": "/app/bin:/usr/bin:/usr/lib/sdk/openjdk/bin"
+        }
+    },
+    "finish-args": [
+        "--share=ipc",
+        "--socket=wayland",
+        "--socket=fallback-x11",
+        "--device=dri"
+    ],
+    "modules": [
+        {
+            "name": "openjdk",
+            "buildsystem": "simple",
+            "build-commands": [
+                "/usr/lib/sdk/openjdk/install.sh"
+            ]
+        },
+        {
+            "name": "example-app",
+            "buildsystem": "simple",
+            "build-commands": [
+                "gradle --offline build",
+                "install -Dm644 build/libs/example-app.jar /app/share/example-app/example-app.jar",
+                "install -Dm755 example-app.sh /app/bin/example-app"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/example/app.git",
+                    "tag": "v1.0.0",
+                    "commit": 0
+                }
+            ]
+        }
+    ]
+}

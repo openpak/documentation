@@ -1,0 +1,21 @@
+# Openpak manifest template — Python / GTK (Meson, GNOME runtime)
+# For pure-Python apps add dependencies as python3 pip modules or via a
+# generated python3-modules.json (see flatpak-pip-generator).
+id: com.example.App
+runtime: org.gnome.Platform
+runtime-version: '50'
+sdk: org.gnome.Sdk
+command: example-app
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+modules:
+  - name: example-app
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/example/app.git
+        tag: v1.0.0
+        commit: 0000000000000000000000000000000000000000

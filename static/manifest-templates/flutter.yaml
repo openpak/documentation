@@ -1,0 +1,31 @@
+# Openpak manifest template — Flutter (Freedesktop runtime)
+# Use flatpak-flutter (https://github.com/TheAppgineer/flatpak-flutter) to
+# generate offline sources for the Flutter SDK and pub packages. The snippet
+# below is the shape of the produced manifest; fill in the generated sources.
+id: com.example.App
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+command: example-app
+finish-args:
+  - --share=ipc
+  - --share=network
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --socket=pulseaudio
+modules:
+  - name: example-app
+    buildsystem: simple
+    build-commands:
+      - flutter build linux --release
+      - cp -r build/linux/*/release/bundle /app/example-app
+      - install -Dm755 example-app.sh /app/bin/example-app
+    sources:
+      - type: git
+        url: https://github.com/example/app.git
+        tag: v1.0.0
+        commit: 0000000000000000000000000000000000000000
+      # Add the offline sources produced by flatpak-flutter here:
+      # - flutter-sdk.json
+      # - pubspec-sources.json

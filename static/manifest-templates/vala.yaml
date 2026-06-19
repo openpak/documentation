@@ -1,0 +1,19 @@
+# Openpak manifest template — Vala (Meson, GNOME runtime)
+id: com.example.App
+runtime: org.gnome.Platform
+runtime-version: '50'
+sdk: org.gnome.Sdk
+command: example-app
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+modules:
+  - name: example-app
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/example/app.git
+        tag: v1.0.0
+        commit: 0000000000000000000000000000000000000000

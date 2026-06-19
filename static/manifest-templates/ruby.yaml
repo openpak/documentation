@@ -1,0 +1,26 @@
+# Openpak manifest template — Ruby (Freedesktop runtime)
+# Vendor gems (`bundle package`, commit vendor/cache) and install with
+# `bundle install --local` so the build stays offline.
+id: com.example.App
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+command: example-app
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+modules:
+  - name: example-app
+    buildsystem: simple
+    build-commands:
+      - bundle config set --local deployment 'true'
+      - bundle install --local
+      - install -Dm755 bin/example-app /app/bin/example-app
+      - cp -a . /app/share/example-app
+    sources:
+      - type: git
+        url: https://github.com/example/app.git
+        tag: v1.0.0
+        commit: 0000000000000000000000000000000000000000

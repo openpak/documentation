@@ -1,0 +1,32 @@
+# Openpak manifest template — Rust (cargo, Freedesktop runtime)
+# Vendor crates offline: generate cargo-sources.json with flatpak-cargo-generator
+# and reference it under sources, then build with --offline.
+id: com.example.App
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+command: example-app
+build-options:
+  append-path: /usr/lib/sdk/rust-stable/bin
+  env:
+    CARGO_HOME: /run/build/example-app/cargo
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+modules:
+  - name: example-app
+    buildsystem: simple
+    build-commands:
+      - cargo --offline fetch --manifest-path Cargo.toml --verbose
+      - cargo --offline build --release --verbose
+      - install -Dm755 ./target/release/example-app -t /app/bin/
+    sources:
+      - type: git
+        url: https://github.com/example/app.git
+        tag: v1.0.0
+        commit: 0000000000000000000000000000000000000000
+      - cargo-sources.json

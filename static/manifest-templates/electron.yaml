@@ -1,0 +1,30 @@
+# Openpak manifest template — Electron / Node.js
+# Provide offline npm/yarn sources via a generated generated-sources.json
+# (flatpak-node-generator). Bundle the prebuilt Electron from the BaseApp.
+id: com.example.App
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+base: org.electronjs.Electron2.BaseApp
+base-version: '25.08'
+command: example-app
+finish-args:
+  - --share=ipc
+  - --share=network
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --socket=pulseaudio
+modules:
+  - name: example-app
+    buildsystem: simple
+    build-commands:
+      - npm ci --offline
+      - npm run build
+      - cp -a dist /app/example-app
+    sources:
+      - type: git
+        url: https://github.com/example/app.git
+        tag: v1.0.0
+        commit: 0000000000000000000000000000000000000000
+      - generated-sources.json

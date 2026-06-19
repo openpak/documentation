@@ -1,0 +1,30 @@
+# Openpak manifest template — Go (Freedesktop runtime)
+# Vendor modules (`go mod vendor`, commit the vendor/ dir) and build with
+# GOFLAGS=-mod=vendor so the build has no network access.
+id: com.example.App
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.golang
+command: example-app
+build-options:
+  append-path: /usr/lib/sdk/golang/bin
+  env:
+    GOFLAGS: -mod=vendor
+    GOBIN: /app/bin
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+modules:
+  - name: example-app
+    buildsystem: simple
+    build-commands:
+      - go build -o /app/bin/example-app .
+    sources:
+      - type: git
+        url: https://github.com/example/app.git
+        tag: v1.0.0
+        commit: 0000000000000000000000000000000000000000

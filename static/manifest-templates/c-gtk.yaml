@@ -1,0 +1,21 @@
+# Openpak manifest template — C / GTK (Meson, GNOME runtime)
+# Replace every placeholder: the app ID, the source URL + commit, and names.
+id: com.example.App
+runtime: org.gnome.Platform
+runtime-version: '50'
+sdk: org.gnome.Sdk
+command: example-app
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+modules:
+  - name: example-app
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/example/app.git
+        # Always pin an exact commit (a tag alone is not reproducible).
+        tag: v1.0.0
+        commit: 0000000000000000000000000000000000000000
