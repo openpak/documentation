@@ -1,0 +1,21 @@
+# Openpak manifest template — GNOME app (GTK4 + libadwaita, Meson)
+# The GNOME runtime bundles GTK4, libadwaita and the GNOME platform libraries.
+id: com.example.App
+runtime: org.gnome.Platform
+runtime-version: '50'
+sdk: org.gnome.Sdk
+command: example-app
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+modules:
+  - name: example-app
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/example/app.git
+        # Pin an exact commit; a tag alone is rejected.
+        tag: v1.0.0
+        commit: 0000000000000000000000000000000000000000

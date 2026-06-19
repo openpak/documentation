@@ -1,0 +1,27 @@
+{
+    "id": "com.example.App",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "25.08",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "example-app",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=wayland",
+        "--socket=fallback-x11",
+        "--device=dri"
+    ],
+    "modules": [
+        {
+            "name": "example-app",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/example/app.git",
+                    "tag": "v1.0.0",
+                    "commit": 0
+                }
+            ]
+        }
+    ]
+}

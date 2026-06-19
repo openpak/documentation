@@ -1,0 +1,21 @@
+# Openpak manifest template — generic Freedesktop app (Meson)
+# The Freedesktop runtime is the minimal base (no GTK/Qt). Use it for SDL,
+# custom-toolkit, or command-line apps. Bundle any GUI toolkit yourself.
+id: com.example.App
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+command: example-app
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+modules:
+  - name: example-app
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/example/app.git
+        tag: v1.0.0
+        commit: 0000000000000000000000000000000000000000

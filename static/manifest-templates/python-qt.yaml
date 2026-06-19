@@ -1,0 +1,24 @@
+# Openpak manifest template — Python / Qt (PySide6, KDE runtime)
+# Vendor pip deps (PySide6 etc.) via a generated python3-modules.json.
+id: com.example.App
+runtime: org.kde.Platform
+runtime-version: '6.10'
+sdk: org.kde.Sdk
+command: example-app
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+modules:
+  - name: example-app
+    buildsystem: simple
+    build-commands:
+      - pip3 install --no-index --find-links=. --prefix=/app .
+      - install -Dm755 example-app.sh /app/bin/example-app
+    sources:
+      - type: git
+        url: https://github.com/example/app.git
+        tag: v1.0.0
+        commit: 0000000000000000000000000000000000000000
+      # - python3-modules.json

@@ -20,13 +20,26 @@ All templates target the **current runtimes** (GNOME `50`, KDE `6.10`,
 Freedesktop `25.08`). See [Runtimes](/docs/for-app-authors/runtimes).
 :::
 
-## Templates
+## By runtime
+
+Pick the runtime your app's toolkit belongs to. GNOME bundles GTK4 +
+libadwaita, KDE bundles Qt6 + Kirigami, and Freedesktop is the minimal base
+for everything else. See [Runtimes](/docs/for-app-authors/runtimes).
+
+| Runtime | Toolkit | Build system | Download |
+| --- | --- | --- | --- |
+| GNOME `50` | GTK4 + libadwaita | Meson | [YAML](pathname:///manifest-templates/gnome.yaml) · [JSON](pathname:///manifest-templates/gnome.json) |
+| KDE `6.10` | Qt6 + Kirigami | CMake | [YAML](pathname:///manifest-templates/kde.yaml) · [JSON](pathname:///manifest-templates/kde.json) |
+| Freedesktop `25.08` | none (SDL / custom / CLI) | Meson | [YAML](pathname:///manifest-templates/freedesktop.yaml) · [JSON](pathname:///manifest-templates/freedesktop.json) |
+
+## By language / toolkit
 
 | Language / toolkit | Build system | Runtime | Download |
 | --- | --- | --- | --- |
 | C / GTK | Meson | GNOME | [YAML](pathname:///manifest-templates/c-gtk.yaml) · [JSON](pathname:///manifest-templates/c-gtk.json) |
 | C++ / Qt | CMake | KDE | [YAML](pathname:///manifest-templates/cpp-qt.yaml) · [JSON](pathname:///manifest-templates/cpp-qt.json) |
 | Python / GTK | Meson | GNOME | [YAML](pathname:///manifest-templates/python-gtk.yaml) · [JSON](pathname:///manifest-templates/python-gtk.json) |
+| Python / Qt (PySide6) | pip | KDE | [YAML](pathname:///manifest-templates/python-qt.yaml) · [JSON](pathname:///manifest-templates/python-qt.json) |
 | Rust | cargo | Freedesktop | [YAML](pathname:///manifest-templates/rust.yaml) · [JSON](pathname:///manifest-templates/rust.json) |
 | Go | go build | Freedesktop | [YAML](pathname:///manifest-templates/go.yaml) · [JSON](pathname:///manifest-templates/go.json) |
 | Electron / Node.js | npm + BaseApp | Freedesktop | [YAML](pathname:///manifest-templates/electron.yaml) · [JSON](pathname:///manifest-templates/electron.json) |

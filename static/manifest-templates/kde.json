@@ -1,0 +1,30 @@
+{
+    "id": "com.example.App",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "6.10",
+    "sdk": "org.kde.Sdk",
+    "command": "example-app",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=wayland",
+        "--socket=fallback-x11",
+        "--device=dri"
+    ],
+    "modules": [
+        {
+            "name": "example-app",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/example/app.git",
+                    "tag": "v1.0.0",
+                    "commit": 0
+                }
+            ]
+        }
+    ]
+}
